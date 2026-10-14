@@ -4,10 +4,11 @@ Last updated: 2026-10-14
 
 ## Current state
 
-- Repository: initialized on branch `work`.
-- Product implementation: in progress.
+- Repository: active on branch `work`; GitHub remote is `zxc2084302707-hash/1`.
+- Product implementation: S0 foundation implemented across seven responsive views.
+- Domain controls: S0 evaluation and deterministic deduplication implemented test-first.
 - Real buyer data: none.
-- Supabase business schema: not applied.
+- Supabase business schema: 17-table migration and tenant-isolation test drafted; not applied.
 - Production deployment: none.
 - External outreach: none.
 - S0: `undetermined`.
@@ -16,5 +17,18 @@ Historical Lovable claims, including seven pages and 23 passing tests, are not c
 
 ## Current cycle
 
-Implementing the S0 foundation described in `docs/superpowers/specs/2026-10-14-africa-buyer-ai-s0-foundation-design.md`.
+Foundation implementation complete on the current branch. Current verification:
+
+- TypeScript: passed (`bun run typecheck`).
+- Unit/component tests: 22 passed, 0 failed (`bun run test:run`).
+- ESLint: passed with zero warnings (`bun run lint`).
+- Production SSR build: passed (`bun run build`).
+- Mobile browser: 8 passed, 0 failed at 375 px (`bun run test:mobile`), covering all seven views plus the not-found state.
+- Supabase schema static check: passed for 17 required tables and security controls.
+- Supabase pgTAP tenant-isolation test: unrun because no disposable local Supabase database is configured.
+- Cloud environment draft: tested install and startup instructions saved; draft still requires user-side publication before a future environment inherits them.
+
+## Blockers and next step
+
+S0 cannot be evaluated because there is no eligible real buyer dataset, supplier review sample, or written provider authorization. Next, provision a disposable Supabase development database, run the migration and RLS tests, then design the lawful real-data acquisition pilot under the CNY 1,000 cap.
 

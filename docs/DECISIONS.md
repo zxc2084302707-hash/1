@@ -16,3 +16,11 @@ Use clearly labelled synthetic fixtures until eligible real data exists. Keep th
 
 Represent outreach as approval requests only. Do not integrate automatic dispatch in S0. Keep migrations as reviewable files and do not apply them to an unknown or production database during foundation work.
 
+## 2026-10-14 — Runtime and routing
+
+Use TanStack Start file routes and SSR. The installed build emits a Fetch handler, so `scripts/serve-built.mjs` provides the tested Node HTTP/static adapter. Development uses Vite through the pinned workspace-local Bun binary.
+
+## 2026-10-14 — Database validation boundary
+
+Keep the migration unapplied until a disposable local Supabase target is identified. Static schema validation does not substitute for pgTAP RLS execution; project status must keep the latter explicitly unrun.
+
