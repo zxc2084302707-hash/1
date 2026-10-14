@@ -2,8 +2,10 @@ export type BuyerGrade = 'A' | 'B' | 'C' | 'ungraded'
 
 export interface BuyerCandidate {
   id: string
+  tenantId: string
   uniqueKey: string
   isDemo: boolean
+  evidenceEligible: boolean
   operatingVerified: boolean
   grade: BuyerGrade
   relevantImporterOrWholesaler: boolean
@@ -26,6 +28,7 @@ export interface ProviderAuthorization {
 }
 
 export interface S0Input {
+  tenantId: string
   candidates: BuyerCandidate[]
   eligibleDataCostCny: number
   supplierReviews: SupplierReview[]

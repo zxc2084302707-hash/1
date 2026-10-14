@@ -349,15 +349,79 @@ for all to authenticated
 using (public.has_tenant_role(tenant_id, array['owner']::public.membership_role[]))
 with check (public.has_tenant_role(tenant_id, array['owner']::public.membership_role[]));
 
+create or replace function public.audit_review_mutation()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  insert into public.audit_events (
+    tenant_id, actor_id, entity_type, entity_id, action, previous_state, new_state
+  ) values (
+    new.tenant_id,
+    auth.uid(),
+    tg_table_name,
+    new.id,
+    lower(tg_op),
+    case when tg_op = 'UPDATE' then to_jsonb(old) else null end,
+    to_jsonb(new)
+  );
+  return new;
+end;
+$$;
+
 do $$
 declare
   table_name text;
 begin
   foreach table_name in array array[
-    'buyers', 'buyer_identifiers', 'contacts', 'contact_verifications',
+    'buyers', 'buyer_identifiers', 'evidence_items', 'contact_verifications',
     'buyer_assessments', 'duplicate_candidates', 'data_provider_authorizations',
-    'cost_entries', 'supplier_evaluations', 'supplier_evaluation_items',
-    'delivery_batches', 'delivery_batch_buyers'
+    'cost_entries', 'delivery_batches', 'delivery_batch_buyers', 'outreach_requests'
+  ] loop
+    execute format(
+      'create trigger %I after insert or update on public.%I for each row execute function public.audit_review_mutation()',
+      table_name || '_audit_review_mutation', table_name
+    );
+  end loop;
+end;
+$$;
+
+alter table public.buyers enable row level security;
+create policy buyers_read on public.buyers
+for select to authenticated using (public.can_access_tenant(tenant_id));
+create policy buyers_editor_insert on public.buyers
+for insert to authenticated
+with check (
+  public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[])
+  and operating_status = 'pending'
+);
+create policy buyers_reviewer_update on public.buyers
+for update to authenticated
+using (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]))
+with check (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]));
+
+alter table public.buyer_identifiers enable row level security;
+create policy buyer_identifiers_read on public.buyer_identifiers
+for select to authenticated using (public.can_access_tenant(tenant_id));
+create policy buyer_identifiers_editor_insert on public.buyer_identifiers
+for insert to authenticated
+with check (
+  public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[])
+  and is_verified = false
+);
+create policy buyer_identifiers_reviewer_update on public.buyer_identifiers
+for update to authenticated
+using (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]))
+with check (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]));
+
+do $$
+declare
+  table_name text;
+begin
+  foreach table_name in array array[
+    'contacts', 'supplier_evaluations', 'supplier_evaluation_items'
   ] loop
     execute format('alter table public.%I enable row level security', table_name);
     execute format(
@@ -365,8 +429,61 @@ begin
       table_name || '_read', table_name
     );
     execute format(
-      'create policy %I on public.%I for all to authenticated using (public.has_tenant_role(tenant_id, array[''analyst'', ''reviewer'', ''owner'']::public.membership_role[])) with check (public.has_tenant_role(tenant_id, array[''analyst'', ''reviewer'', ''owner'']::public.membership_role[]))',
-      table_name || '_write', table_name
+      'create policy %I on public.%I for insert to authenticated with check (public.has_tenant_role(tenant_id, array[''analyst'', ''reviewer'', ''owner'']::public.membership_role[]))',
+      table_name || '_editor_insert', table_name
+    );
+    execute format(
+      'create policy %I on public.%I for update to authenticated using (public.has_tenant_role(tenant_id, array[''analyst'', ''reviewer'', ''owner'']::public.membership_role[])) with check (public.has_tenant_role(tenant_id, array[''analyst'', ''reviewer'', ''owner'']::public.membership_role[]))',
+      table_name || '_editor_update', table_name
+    );
+  end loop;
+end;
+$$;
+
+alter table public.cost_entries enable row level security;
+create policy cost_entries_read on public.cost_entries
+for select to authenticated using (public.can_access_tenant(tenant_id));
+create policy cost_entries_unapproved_insert on public.cost_entries
+for insert to authenticated
+with check (
+  public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[])
+  and approved_by is null
+);
+create policy cost_entries_unapproved_update on public.cost_entries
+for update to authenticated
+using (
+  approved_by is null
+  and public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[])
+)
+with check (
+  approved_by is null
+  and public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[])
+);
+create policy cost_entries_reviewer_update on public.cost_entries
+for update to authenticated
+using (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]))
+with check (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]));
+
+do $$
+declare
+  table_name text;
+begin
+  foreach table_name in array array[
+    'contact_verifications', 'buyer_assessments', 'duplicate_candidates',
+    'data_provider_authorizations', 'delivery_batches', 'delivery_batch_buyers'
+  ] loop
+    execute format('alter table public.%I enable row level security', table_name);
+    execute format(
+      'create policy %I on public.%I for select to authenticated using (public.can_access_tenant(tenant_id))',
+      table_name || '_read', table_name
+    );
+    execute format(
+      'create policy review_artifacts_reviewer_insert on public.%I for insert to authenticated with check (public.has_tenant_role(tenant_id, array[''reviewer'', ''owner'']::public.membership_role[]))',
+      table_name
+    );
+    execute format(
+      'create policy review_artifacts_reviewer_update on public.%I for update to authenticated using (public.has_tenant_role(tenant_id, array[''reviewer'', ''owner'']::public.membership_role[])) with check (public.has_tenant_role(tenant_id, array[''reviewer'', ''owner'']::public.membership_role[]))',
+      table_name
     );
   end loop;
 end;
@@ -375,31 +492,51 @@ $$;
 alter table public.evidence_items enable row level security;
 create policy evidence_read on public.evidence_items
 for select to authenticated using (public.can_access_tenant(tenant_id));
-create policy evidence_insert on public.evidence_items
+create policy evidence_pending_insert on public.evidence_items
 for insert to authenticated
-with check (public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[]));
+with check (
+  public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[])
+  and review_status = 'pending'
+  and reviewed_by is null
+  and reviewed_at is null
+);
 create policy evidence_review_update on public.evidence_items
 for update to authenticated
 using (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]))
-with check (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]));
+with check (
+  public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[])
+  and (
+    (review_status = 'pending' and reviewed_by is null and reviewed_at is null)
+    or (review_status in ('verified', 'rejected', 'superseded') and reviewed_by is not null and reviewed_at is not null)
+  )
+);
 
 alter table public.outreach_requests enable row level security;
 create policy outreach_read on public.outreach_requests
 for select to authenticated using (public.can_access_tenant(tenant_id));
-create policy outreach_insert on public.outreach_requests
+create policy outreach_pending_insert on public.outreach_requests
 for insert to authenticated
-with check (public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[]));
+with check (
+  public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[])
+  and status = 'pending'
+  and reviewed_by is null
+  and reviewed_at is null
+  and dispatched_at is null
+);
 create policy outreach_review_update on public.outreach_requests
 for update to authenticated
 using (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]))
-with check (public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[]));
+with check (
+  public.has_tenant_role(tenant_id, array['reviewer', 'owner']::public.membership_role[])
+  and status in ('approved', 'rejected')
+  and reviewed_by is not null
+  and reviewed_at is not null
+  and dispatched_at is null
+);
 
 alter table public.audit_events enable row level security;
 create policy audit_read on public.audit_events
 for select to authenticated using (public.can_access_tenant(tenant_id));
-create policy audit_insert on public.audit_events
-for insert to authenticated
-with check (public.has_tenant_role(tenant_id, array['analyst', 'reviewer', 'owner']::public.membership_role[]));
 
 comment on table public.evidence_items is 'Append-oriented source claims. Provenance columns are immutable; corrections create superseding rows.';
 comment on table public.outreach_requests is 'Draft and approval audit only. No automatic dispatch integration is created by this migration.';

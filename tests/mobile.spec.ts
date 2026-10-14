@@ -4,6 +4,7 @@ const routes = [
   ['/', '买家情报工作台'],
   ['/buyers', '买家企业'],
   ['/buyers/demo-atlas', 'Atlas Home Distribution'],
+  ['/buyers/demo-nova', 'Nova Retail Supply'],
   ['/evidence', '证据审核'],
   ['/contacts', '联系方式'],
   ['/costs', '成本台账'],
@@ -26,6 +27,11 @@ for (const [path, heading] of routes) {
     expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.viewportWidth)
   })
 }
+
+test('unknown buyer has a buyer-specific not-found state', async ({ page }) => {
+  await page.goto('/buyers/unknown')
+  await expect(page.getByRole('heading', { name: '未找到买家' })).toBeVisible()
+})
 
 test('unknown route has a useful mobile-safe not-found state', async ({ page }) => {
   await page.goto('/missing-route')

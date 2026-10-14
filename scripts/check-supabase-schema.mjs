@@ -38,10 +38,18 @@ for (const control of [
   'create or replace function public.has_tenant_role',
   'enable row level security',
   'evidence_provenance_immutable',
+  'evidence_pending_insert',
   'outreach_review_update',
-  'audit_insert',
+  'outreach_pending_insert',
+  'review_artifacts_reviewer_insert',
+  'audit_review_mutation',
+  'buyers_editor_insert',
 ]) {
   if (!migration.includes(control)) throw new Error(`Missing security control: ${control}`)
+}
+
+if (migration.includes("for all to authenticated using (public.has_tenant_role")) {
+  throw new Error('Generic write policies must not grant analysts review or delete access')
 }
 
 process.stdout.write(

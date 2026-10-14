@@ -14,8 +14,10 @@ export interface DemoBuyer extends BuyerCandidate {
 export const demoBuyers: DemoBuyer[] = [
   {
     id: 'demo-atlas',
+    tenantId: 'demo-tenant',
     uniqueKey: 'demo-atlas',
     isDemo: true,
+    evidenceEligible: false,
     name: 'Atlas Home Distribution',
     location: 'Lagos, Nigeria',
     businessType: '小家电批发商',
@@ -33,8 +35,10 @@ export const demoBuyers: DemoBuyer[] = [
   },
   {
     id: 'demo-nova',
+    tenantId: 'demo-tenant',
     uniqueKey: 'demo-nova',
     isDemo: true,
+    evidenceEligible: false,
     name: 'Nova Retail Supply',
     location: 'Abuja, Nigeria',
     businessType: '区域分销商',
@@ -52,8 +56,10 @@ export const demoBuyers: DemoBuyer[] = [
   },
   {
     id: 'demo-coast',
+    tenantId: 'demo-tenant',
     uniqueKey: 'demo-coast',
     isDemo: true,
+    evidenceEligible: false,
     name: 'Coastline Appliance Mart',
     location: 'Port Harcourt, Nigeria',
     businessType: '家电零售与批发',
@@ -72,6 +78,7 @@ export const demoBuyers: DemoBuyer[] = [
 ]
 
 export const demoS0Input: S0Input = {
+  tenantId: 'demo-tenant',
   candidates: demoBuyers,
   eligibleDataCostCny: 0,
   supplierReviews: [],

@@ -24,13 +24,15 @@ function metric(options: MetricOptions): S0Metric {
   return { excluded: 0, ...options }
 }
 
-function measuredState(hasPopulation: boolean, passes: boolean): MetricState {
-  if (!hasPopulation) return 'unmeasured'
+function measuredState(isMeasured: boolean, passes: boolean): MetricState {
+  if (!isMeasured) return 'unmeasured'
   return passes ? 'passing' : 'failing'
 }
 
-function uniqueRealCandidates(candidates: BuyerCandidate[]) {
-  const real = candidates.filter((buyer) => !buyer.isDemo)
+function uniqueRealCandidates(candidates: BuyerCandidate[], tenantId: string) {
+  const real = candidates.filter(
+    (buyer) => !buyer.isDemo && buyer.tenantId === tenantId && buyer.evidenceEligible,
+  )
   const unique = new Map<string, BuyerCandidate>()
   for (const buyer of real) {
     if (!unique.has(buyer.uniqueKey)) unique.set(buyer.uniqueKey, buyer)
@@ -43,10 +45,11 @@ function uniqueRealCandidates(candidates: BuyerCandidate[]) {
 }
 
 export function evaluateS0(input: S0Input): S0Evaluation {
-  const population = uniqueRealCandidates(input.candidates)
+  const population = uniqueRealCandidates(input.candidates, input.tenantId)
   const buyers = population.candidates
   const count = buyers.length
   const hasBuyers = count > 0
+  const hasMeasurement = input.measuredAt !== null
   const operating = buyers.filter((buyer) => buyer.operatingVerified).length
   const qualified = buyers.filter(
     (buyer) =>
@@ -63,14 +66,28 @@ export function evaluateS0(input: S0Input): S0Evaluation {
       buyer.relevantImporterOrWholesaler &&
       buyer.verifiedUsableContact,
   ).length
-  const eligibleReviews = input.supplierReviews.filter((review) => review.eligible)
-  const supplierCounts = new Map<string, number>()
-  for (const review of eligibleReviews) {
-    supplierCounts.set(review.supplierId, (supplierCounts.get(review.supplierId) ?? 0) + 1)
+  const eligibleBuyerIds = new Set(buyers.map((buyer) => buyer.id))
+  const uniqueEligibleReviews = new Map<string, (typeof input.supplierReviews)[number]>()
+  for (const review of input.supplierReviews) {
+    if (!review.eligible || !eligibleBuyerIds.has(review.buyerId)) continue
+    const key = `${review.supplierId}\u0000${review.buyerId}`
+    if (!uniqueEligibleReviews.has(key)) uniqueEligibleReviews.set(key, review)
   }
-  const supplierSampleComplete =
-    supplierCounts.size >= 3 && [...supplierCounts.values()].every((reviews) => reviews >= 10)
-  const acceptedReviews = eligibleReviews.filter((review) => review.accepted).length
+  const reviewsBySupplier = new Map<string, (typeof input.supplierReviews)>()
+  for (const review of uniqueEligibleReviews.values()) {
+    const reviews = reviewsBySupplier.get(review.supplierId) ?? []
+    reviews.push(review)
+    reviewsBySupplier.set(review.supplierId, reviews)
+  }
+  const qualifyingSupplierReviews = [...reviewsBySupplier.values()].filter(
+    (reviews) => reviews.length >= 10,
+  )
+  const eligibleReviews = qualifyingSupplierReviews.flat()
+  const supplierSampleComplete = qualifyingSupplierReviews.length >= 3
+  const countedSupplierReviews = supplierSampleComplete
+    ? eligibleReviews
+    : [...uniqueEligibleReviews.values()]
+  const acceptedReviews = countedSupplierReviews.filter((review) => review.accepted).length
   const authorizedProviders = input.providerAuthorizations.filter(
     (authorization) =>
       authorization.isCore && authorization.writtenCommercialSaasAuthorization,
@@ -82,7 +99,7 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'uniqueCandidates',
       label: '真实唯一候选企业',
-      state: measuredState(hasBuyers, count >= 100),
+      state: measuredState(hasMeasurement && hasBuyers, count >= 100),
       numerator: count,
       denominator: 100,
       value: count,
@@ -94,7 +111,7 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'operatingBusinesses',
       label: '真实经营企业',
-      state: measuredState(hasBuyers, operating / count >= 0.9),
+      state: measuredState(hasMeasurement && hasBuyers, operating / count >= 0.9),
       numerator: operating,
       denominator: count,
       value: hasBuyers ? operating / count : null,
@@ -105,7 +122,7 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'qualifiedBuyers',
       label: 'A/B级进口或批发企业',
-      state: measuredState(hasBuyers, qualified.length / count >= 0.7),
+      state: measuredState(hasMeasurement && hasBuyers, qualified.length / count >= 0.7),
       numerator: qualified.length,
       denominator: count,
       value: hasBuyers ? qualified.length / count : null,
@@ -116,7 +133,7 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'confirmedAImporters',
       label: '已确认A级进口商',
-      state: measuredState(hasBuyers, confirmedA >= 15),
+      state: measuredState(hasMeasurement && hasBuyers, confirmedA >= 15),
       numerator: confirmedA,
       denominator: count,
       value: confirmedA,
@@ -127,7 +144,7 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'verifiedContacts',
       label: '合法可用的已验证企业联系方式',
-      state: measuredState(hasBuyers, contacts >= 60),
+      state: measuredState(hasMeasurement && hasBuyers, contacts >= 60),
       numerator: contacts,
       denominator: count,
       value: contacts,
@@ -138,7 +155,10 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'qualifiedBuyerCost',
       label: '合格买家数据成本',
-      state: measuredState(qualified.length > 0, qualifiedCost !== null && qualifiedCost <= 8),
+      state: measuredState(
+        hasMeasurement && qualified.length > 0,
+        qualifiedCost !== null && qualifiedCost <= 8,
+      ),
       numerator: input.eligibleDataCostCny,
       denominator: qualified.length,
       value: qualifiedCost,
@@ -149,7 +169,10 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'deliveryCompleteness',
       label: '20家完整交付企业',
-      state: measuredState(delivery.length > 0, delivery.length === 20 && deliveryEligible === 20),
+      state: measuredState(
+        hasMeasurement && delivery.length > 0,
+        delivery.length === 20 && deliveryEligible === 20,
+      ),
       numerator: deliveryEligible,
       denominator: delivery.length,
       value: deliveryEligible,
@@ -161,14 +184,15 @@ export function evaluateS0(input: S0Input): S0Evaluation {
       key: 'supplierAcceptance',
       label: '中国供应商认可率',
       state: measuredState(
-        supplierSampleComplete,
-        eligibleReviews.length > 0 && acceptedReviews / eligibleReviews.length >= 0.7,
+        hasMeasurement && supplierSampleComplete,
+        countedSupplierReviews.length > 0 &&
+          acceptedReviews / countedSupplierReviews.length >= 0.7,
       ),
       numerator: acceptedReviews,
-      denominator: eligibleReviews.length,
+      denominator: countedSupplierReviews.length,
       value:
-        supplierSampleComplete && eligibleReviews.length > 0
-          ? acceptedReviews / eligibleReviews.length
+        supplierSampleComplete && countedSupplierReviews.length > 0
+          ? acceptedReviews / countedSupplierReviews.length
           : null,
       threshold: '3家×10条，认可率≥70%',
       measuredAt: input.measuredAt,
@@ -177,7 +201,10 @@ export function evaluateS0(input: S0Input): S0Evaluation {
     metric({
       key: 'providerAuthorization',
       label: '核心数据提供方商业授权',
-      state: measuredState(input.providerAuthorizations.length > 0, authorizedProviders >= 1),
+      state: measuredState(
+        hasMeasurement && input.providerAuthorizations.length > 0,
+        authorizedProviders >= 1,
+      ),
       numerator: authorizedProviders,
       denominator: input.providerAuthorizations.length,
       value: authorizedProviders,

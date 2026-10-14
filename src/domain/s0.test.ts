@@ -5,8 +5,10 @@ import type { BuyerCandidate, S0Input } from './types'
 function candidate(index: number): BuyerCandidate {
   return {
     id: `buyer-${index}`,
+    tenantId: 'tenant-1',
     uniqueKey: `reg-ng-${index}`,
     isDemo: false,
+    evidenceEligible: true,
     operatingVerified: index < 90,
     grade: index < 15 ? 'A' : index < 70 ? 'B' : 'C',
     relevantImporterOrWholesaler: index < 70,
@@ -18,6 +20,7 @@ function candidate(index: number): BuyerCandidate {
 
 function passingInput(): S0Input {
   return {
+    tenantId: 'tenant-1',
     candidates: Array.from({ length: 100 }, (_, index) => candidate(index)),
     eligibleDataCostCny: 560,
     supplierReviews: Array.from({ length: 30 }, (_, index) => ({
@@ -36,6 +39,7 @@ function passingInput(): S0Input {
 describe('evaluateS0', () => {
   it('keeps an empty dataset undetermined with every metric unmeasured', () => {
     const result = evaluateS0({
+      tenantId: 'tenant-1',
       candidates: [],
       eligibleDataCostCny: 0,
       supplierReviews: [],
@@ -58,6 +62,28 @@ describe('evaluateS0', () => {
 
     expect(population).toMatchObject({ numerator: 100, denominator: 100, excluded: 2 })
     expect(result.state).toBe('passed')
+  })
+
+  it('excludes candidates without matching ownership or required evidence', () => {
+    const input = passingInput()
+    input.candidates.push({ ...candidate(100), id: 'foreign', tenantId: 'tenant-2' })
+    input.candidates.push({ ...candidate(101), id: 'no-evidence', evidenceEligible: false })
+
+    const result = evaluateS0(input)
+    const population = result.metrics.find((metric) => metric.key === 'uniqueCandidates')
+
+    expect(population).toMatchObject({ numerator: 100, excluded: 2 })
+    expect(result.state).toBe('passed')
+  })
+
+  it('remains undetermined without a measurement timestamp', () => {
+    const input = passingInput()
+    input.measuredAt = null
+
+    const result = evaluateS0(input)
+
+    expect(result.state).toBe('undetermined')
+    expect(result.metrics.every((metric) => metric.state === 'unmeasured')).toBe(true)
   })
 
   it('passes all metrics at the exact frozen thresholds', () => {
@@ -175,6 +201,50 @@ describe('evaluateS0', () => {
       denominator: 29,
     })
     expect(result.state).toBe('undetermined')
+  })
+
+  it('deduplicates supplier reviews and excludes demo buyers', () => {
+    const input = passingInput()
+    input.supplierReviews = Array.from({ length: 30 }, (_, index) => ({
+      supplierId: `supplier-${Math.floor(index / 10) + 1}`,
+      buyerId: 'buyer-0',
+      accepted: true,
+      eligible: true,
+    }))
+
+    const repeated = evaluateS0(input)
+    expect(repeated.metrics.find((metric) => metric.key === 'supplierAcceptance')?.state).toBe(
+      'unmeasured',
+    )
+
+    input.candidates[0]!.isDemo = true
+    input.supplierReviews = passingInput().supplierReviews.map((review) => ({
+      ...review,
+      buyerId: 'buyer-0',
+    }))
+
+    const demo = evaluateS0(input)
+    expect(demo.metrics.find((metric) => metric.key === 'supplierAcceptance')?.state).toBe(
+      'unmeasured',
+    )
+  })
+
+  it('ignores an incomplete additional supplier once three supplier samples are complete', () => {
+    const input = passingInput()
+    input.supplierReviews.push({
+      supplierId: 'supplier-4',
+      buyerId: 'buyer-40',
+      accepted: false,
+      eligible: true,
+    })
+
+    const result = evaluateS0(input)
+
+    expect(result.metrics.find((metric) => metric.key === 'supplierAcceptance')).toMatchObject({
+      state: 'passing',
+      numerator: 21,
+      denominator: 30,
+    })
   })
 
   it('leaves provider authorization unmeasured when no provider evidence exists', () => {

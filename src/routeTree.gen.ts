@@ -15,7 +15,7 @@ import { Route as ContactsRouteImport } from './routes/contacts'
 import { Route as CostsRouteImport } from './routes/costs'
 import { Route as EvidenceRouteImport } from './routes/evidence'
 import { Route as S0RouteImport } from './routes/s0'
-import { Route as BuyersBuyerIdRouteImport } from './routes/buyers.$buyerId'
+import { Route as BuyersBuyerIdRouteImport } from './routes/buyers_.$buyerId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -48,14 +48,14 @@ const S0Route = S0RouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const BuyersBuyerIdRoute = BuyersBuyerIdRouteImport.update({
-  id: '/$buyerId',
-  path: '/$buyerId',
-  getParentRoute: () => BuyersRoute,
+  id: '/buyers_/$buyerId',
+  path: '/buyers/$buyerId',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/buyers': typeof BuyersRouteWithChildren
+  '/buyers': typeof BuyersRoute
   '/contacts': typeof ContactsRoute
   '/costs': typeof CostsRoute
   '/evidence': typeof EvidenceRoute
@@ -64,7 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/buyers': typeof BuyersRouteWithChildren
+  '/buyers': typeof BuyersRoute
   '/contacts': typeof ContactsRoute
   '/costs': typeof CostsRoute
   '/evidence': typeof EvidenceRoute
@@ -74,12 +74,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/buyers': typeof BuyersRouteWithChildren
+  '/buyers': typeof BuyersRoute
   '/contacts': typeof ContactsRoute
   '/costs': typeof CostsRoute
   '/evidence': typeof EvidenceRoute
   '/s0': typeof S0Route
-  '/buyers/$buyerId': typeof BuyersBuyerIdRoute
+  '/buyers_/$buyerId': typeof BuyersBuyerIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -108,16 +108,17 @@ export interface FileRouteTypes {
     | '/costs'
     | '/evidence'
     | '/s0'
-    | '/buyers/$buyerId'
+    | '/buyers_/$buyerId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BuyersRoute: typeof BuyersRouteWithChildren
+  BuyersRoute: typeof BuyersRoute
   ContactsRoute: typeof ContactsRoute
   CostsRoute: typeof CostsRoute
   EvidenceRoute: typeof EvidenceRoute
   S0Route: typeof S0Route
+  BuyersBuyerIdRoute: typeof BuyersBuyerIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -164,34 +165,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof S0RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/buyers/$buyerId': {
-      id: '/buyers/$buyerId'
-      path: '/$buyerId'
+    '/buyers_/$buyerId': {
+      id: '/buyers_/$buyerId'
+      path: '/buyers/$buyerId'
       fullPath: '/buyers/$buyerId'
       preLoaderRoute: typeof BuyersBuyerIdRouteImport
-      parentRoute: typeof BuyersRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
-interface BuyersRouteChildren {
-  BuyersBuyerIdRoute: typeof BuyersBuyerIdRoute
-}
-
-const BuyersRouteChildren: BuyersRouteChildren = {
-  BuyersBuyerIdRoute: BuyersBuyerIdRoute,
-}
-
-const BuyersRouteWithChildren =
-  BuyersRoute._addFileChildren(BuyersRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BuyersRoute: BuyersRouteWithChildren,
+  BuyersRoute: BuyersRoute,
   ContactsRoute: ContactsRoute,
   CostsRoute: CostsRoute,
   EvidenceRoute: EvidenceRoute,
   S0Route: S0Route,
+  BuyersBuyerIdRoute: BuyersBuyerIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

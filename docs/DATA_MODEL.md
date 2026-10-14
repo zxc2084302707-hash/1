@@ -11,7 +11,7 @@ RLS uses two security-definer helpers with a fixed `public` search path:
 - `can_access_tenant(uuid)` permits reads to any current member.
 - `has_tenant_role(uuid, membership_role[])` permits writes by the required roles.
 
-Viewer access is read-only. Analysts, reviewers, and owners may maintain research records. Evidence review and outreach approval updates require reviewer or owner. Membership changes require owner. Tenants are provisioned outside browser flows.
+Viewer access is read-only. Analysts may insert pending buyers, identifiers, evidence, contacts, costs, supplier samples, and outreach drafts. Reviewer or owner authority is required for operating-state changes, identifier verification, contact verification, buyer assessment, duplicate resolution, provider authorization, delivery approval, evidence review, cost approval, and outreach approval. No business table exposes a delete policy, so deleting a buyer cannot cascade-delete its evidence. Membership changes require owner. Tenants are provisioned outside browser flows.
 
 `supabase/tests/tenant_isolation.sql` is intended for a disposable local Supabase database. It proves same-tenant reads and writes, UUID-based cross-tenant select denial, cross-tenant insert rejection, cross-tenant update invisibility, and the membership helper boundary.
 
@@ -23,7 +23,7 @@ A merge must preserve both buyer IDs in the duplicate record and move or retain 
 
 ## Evidence and contacts
 
-`evidence_items` records the source URL, publisher, capture time, claim type, claim text, review status, reviewer, and optional superseded evidence. A database trigger makes provenance columns immutable. Corrections create a new row with `supersedes_evidence_id`; evidence has no delete policy.
+`evidence_items` records the source URL, publisher, capture time, claim type, claim text, review status, reviewer, and optional superseded evidence. New evidence must enter as pending without reviewer fields. A database trigger makes provenance columns immutable. Corrections create a new row with `supersedes_evidence_id`; evidence has no delete policy.
 
 `contacts` records company-level channels and lawful-use basis. `contact_verifications` records method, state, reviewer, evidence, and verification time. A contact contributes to S0 only when it is company-level, has a lawful-use basis, and has a verified review backed by evidence.
 
@@ -37,9 +37,9 @@ A merge must preserve both buyer IDs in the duplicate record and move or retain 
 
 ## Outreach and audit
 
-`outreach_requests` stores drafts and approval state. Analysts may create pending requests; only reviewers or owners may approve or reject. The migration contains no email, WhatsApp, or dispatch integration. A dispatched state requires reviewer and dispatch timestamps for future audited integrations.
+`outreach_requests` stores drafts and approval state. Analysts may create only pending, unreviewed requests; only reviewers or owners may approve or reject. No RLS policy permits a dispatched transition. The migration contains no email, WhatsApp, or dispatch integration.
 
-`audit_events` is append-only under RLS and stores actor, action, entity, previous state, and new state. It has no update or delete policy.
+`audit_events` is append-only under RLS and stores actor, action, entity, previous state, and new state. Security-definer triggers record insert/update history for evidence and every review/approval artifact. Authenticated clients have read-only access to the audit table; it has no client insert, update, or delete policy.
 
 ## Migration review procedure
 
