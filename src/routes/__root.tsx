@@ -13,6 +13,7 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
+  notFoundComponent: NotFoundPage,
 })
 
 function RootComponent() {
@@ -26,6 +27,17 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head><HeadContent /></head>
       <body>{children}<Scripts /></body>
     </html>
+  )
+}
+
+function NotFoundPage() {
+  return (
+    <section className="empty-state">
+      <span className="eyebrow">404</span>
+      <h1>页面不存在</h1>
+      <p>该地址没有对应的买家情报页面。</p>
+      <a className="secondary-action" href="/">返回总览</a>
+    </section>
   )
 }
 
