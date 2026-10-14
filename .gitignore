@@ -1,0 +1,14 @@
+node_modules/
+.output/
+.tanstack/
+dist/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+.superpowers/
+routeTree.gen.ts
+src/routeTree.gen.ts
+
