@@ -9,6 +9,4 @@ test-results/
 .env.*
 !.env.example
 .superpowers/
-routeTree.gen.ts
-src/routeTree.gen.ts
 
