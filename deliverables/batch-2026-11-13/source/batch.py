@@ -5,10 +5,10 @@ P=Path(__file__).resolve().parent
 W,H=720,1280
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf';REG='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 PACKS=[
- {'id':'hair','a':'scrunchies','b':'clips','hook':'HAIR PICK: A OR B?','a_label':'SCRUNCHIES','b_label':'CLAW CLIPS','a_pivot':'SATIN STYLE?','b_pivot':'CLAW STYLE?','mid':'WHICH ONE IS YOU?','accent':'#6E43C7','accent2':'#FF729D','slug':'scrunchies-or-clips','caption':'Team scrunchies or team claw clips? Pick A or B for your everyday hair style. Vote on PickVela. Free style poll, no checkout. https://buylink-ng.onrender.com/p/scrunchies-or-clips/?src=tiktok #Nigeria #HairAccessories #PickVela'},
- {'id':'bags','a':'crossbody','b':'tote','hook':'YOUR DAILY BAG?','a_label':'CROSSBODY','b_label':'CANVAS TOTE','a_pivot':'CARRY LIGHT?','b_pivot':'BRING MORE?','mid':'WHICH ONE FITS?','accent':'#52B6A4','accent2':'#F5AF61','slug':'crossbody-or-tote','caption':'Going out today: crossbody or canvas tote? A or B? Choose your style on PickVela. Free poll, no checkout. https://buylink-ng.onrender.com/p/crossbody-or-tote/?src=tiktok #Nigeria #BagStyle #PickVela'},
- {'id':'carry','a':'organiser','b':'pouch','hook':'PACKING: A OR B?','a_label':'JEWELLERY BOX','b_label':'ZIP POUCH','a_pivot':'SORTED SPACE?','b_pivot':'SMALL POUCH?','mid':'WHICH WOULD YOU PICK?','accent':'#9674C5','accent2':'#F27797','slug':'organiser-or-pouch','caption':'For your small essentials: a jewellery organiser or a zip pouch? Pick A or B on PickVela. Style references only; no checkout. https://buylink-ng.onrender.com/p/organiser-or-pouch/?src=tiktok #Nigeria #EverydayStyle #PickVela'},
- {'id':'hair_details','a':'pins','b':'headbands','hook':'HAIR DETAIL: A OR B?','a_label':'PEARL PINS','b_label':'HEADBAND','a_pivot':'SUBTLE DETAIL?','b_pivot':'COLOUR POP?','mid':'WHICH ONE IS YOU?','accent':'#BD875D','accent2':'#6DAF9A','slug':'pins-or-headbands','caption':'Pearl hair pins or a colourful headband? Which style would you actually choose? Vote A or B on PickVela. Style references only. https://buylink-ng.onrender.com/p/pins-or-headbands/?src=tiktok #Nigeria #HairAccessories #PickVela'}
+ {'id':'hair','a':'scrunchies','b':'clips','hook':'SCRUNCHIES OR CLAW CLIPS?','a_label':'SCRUNCHIES','b_label':'CLAW CLIPS','a_pivot':'SOFT SATIN LOOK?','b_pivot':'CLIP AND GO?','mid':'WHAT WOULD YOU USE TODAY?','close':'YOUR HAIR PICK?','accent':'#6E43C7','accent2':'#FF729D','slug':'scrunchies-or-clips','caption':'For everyday hair, would you reach for a satin scrunchie or a claw clip? Pick one on PickVela. It is a quick style poll, with no checkout. https://buylink-ng.onrender.com/p/scrunchies-or-clips/?src=tiktok #Nigeria #HairAccessories #PickVela'},
+ {'id':'bags','a':'crossbody','b':'tote','hook':'WHICH BAG FOR ERRANDS?','a_label':'CROSSBODY','b_label':'CANVAS TOTE','a_pivot':'JUST THE ESSENTIALS?','b_pivot':'ROOM FOR EXTRAS?','mid':'WHICH WOULD YOU GRAB?','close':'YOUR EVERYDAY BAG?','accent':'#52B6A4','accent2':'#F5AF61','slug':'crossbody-or-tote','caption':'Quick errand: are you grabbing the crossbody or bringing the tote? Pick the bag you would use on PickVela. These are style references, not items for sale. https://buylink-ng.onrender.com/p/crossbody-or-tote/?src=tiktok #Nigeria #BagStyle #PickVela'},
+ {'id':'carry','a':'organiser','b':'pouch','hook':'BOX OR POUCH FOR SMALL THINGS?','a_label':'JEWELLERY BOX','b_label':'ZIP POUCH','a_pivot':'EVERYTHING IN ITS PLACE?','b_pivot':'EASY TO PACK?','mid':'HOW WOULD YOU STORE THEM?','close':'BOX OR POUCH?','accent':'#9674C5','accent2':'#F27797','slug':'organiser-or-pouch','caption':'Little things are easy to lose. Would you keep them in a jewellery box or a zip pouch? Vote on PickVela. The photos show style ideas, not stock. https://buylink-ng.onrender.com/p/organiser-or-pouch/?src=tiktok #Nigeria #EverydayStyle #PickVela'},
+ {'id':'hair_details','a':'pins','b':'headbands','hook':'PEARL PINS OR A HEADBAND?','a_label':'PEARL PINS','b_label':'HEADBAND','a_pivot':'A LITTLE SHINE?','b_pivot':'A POP OF COLOUR?','mid':'WHICH WOULD YOU WEAR?','close':'YOUR HAIR DETAIL?','accent':'#BD875D','accent2':'#6DAF9A','slug':'pins-or-headbands','caption':'A small detail can change the whole look. Pearl pins or a colourful headband: which would you wear? Pick one on PickVela. No checkout. https://buylink-ng.onrender.com/p/pins-or-headbands/?src=tiktok #Nigeria #HairAccessories #PickVela'}
 ]
 def draw_text(im,s,x,y,size,color='#18252B',anchor='mm',bold=True,maxw=640):
  d=ImageDraw.Draw(im)
@@ -33,7 +33,7 @@ def make(pack,t,A,B):
   rr(im,(28,245,692,410),28,cream);draw_text(im,pack['hook'],360,327,68,ink)
   badge(im,'A',125,780,accent);badge(im,'B',595,780,accent2)
   rr(im,(152,837,568,910),22,ink)
-  draw_text(im,'TWO STYLES. ONE VOTE.',360,875,34,'white')
+  draw_text(im,'YOU PICK. WE LISTEN.',360,875,34,'white')
  elif t<5:
   p=(t-2.4)/2.6;im=Image.new('RGB',(W,H),accent);brand(im,True)
   photo(im,A,(24,170,696,880),p)
@@ -50,12 +50,12 @@ def make(pack,t,A,B):
   photo(im,A,(35,285,345,690),p);photo(im,B,(375,285,685,690),p)
   badge(im,'A',112,665,accent);badge(im,'B',608,665,accent2)
   draw_text(im,pack['a_label'],190,735,34,ink,maxw=270);draw_text(im,pack['b_label'],530,735,34,ink,maxw=270)
-  draw_text(im,'COMMENT A OR B',360,817,56,accent)
-  draw_text(im,'Then vote on PickVela',360,884,31,ink,bold=False)
+  draw_text(im,'VOTE ON PICKVELA',360,817,50,accent)
+  draw_text(im,'Free style poll · no checkout',360,884,30,ink,bold=False)
  else:
   p=(t-11.2)/3.8;im=Image.new('RGB',(W,H),'#174F3D');brand(im,True)
   photo(im,A,(40,225,345,620),p);photo(im,B,(375,225,680,620),p)
-  draw_text(im,'PICK A OR B',360,685,70,'white')
+  draw_text(im,pack['close'],360,685,70,'white')
   rr(im,(65,735,655,825),30,cream);draw_text(im,'VOTE ON PICKVELA',360,780,43,'#174F3D')
   draw_text(im,'buylink-ng.onrender.com',360,887,30,'white')
   draw_text(im,'Style reference photos  |  Pexels',360,1220,20,'#C9CCD0',bold=False)
