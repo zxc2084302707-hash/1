@@ -12,7 +12,7 @@ Render initial deployment succeeded on 2026-11-13. Third-party independent brows
 
 ## Three components explained
 
-1. **GitHub is your source-code repository.** The `buylink-ng-free` branch contains the website. Changes committed to this branch are automatically picked up by Render.
+1. **GitHub is your source-code repository.** The `buylink-ng-free` branch contains the website. IMPORTANT: this Render site was created from a public Git URL, not a connected Git-provider integration. Render does **not** automatically deploy later commits in this mode, even if `autoDeploy=yes` appears in service metadata. Manual deployments are required until you connect GitHub inside Render and reconfigure the site.
 2. **Render hosts the public static website.** Service name `buylink-ng`, build command is a simple echo, publish directory is `docs`. The site uses Render Static Site, not a paid Web Service.
 3. **Supabase is the database and backend API.** Tables `public.buylink_polls`, `buylink_votes`, `buylink_interests`, and `buylink_events` store live data. Users do not need to register to vote.
 
@@ -20,7 +20,7 @@ Render initial deployment succeeded on 2026-11-13. Third-party independent brows
 
 - **Share the site:** use https://buylink-ng.onrender.com/
 - **Share an individual poll:** on the poll page, use Share to WhatsApp or Copy link; each poll has a unique URL and its own social-preview title.
-- **Update text/layout:** edit website files in GitHub branch `buylink-ng-free` under `docs/`. When you commit, Render auto-deploys. Wait for the service Deploys tab to say Live.
+- **Update text/layout:** edit website files in GitHub branch `buylink-ng-free` under `docs/`. Commit the change, then in Render → this site's Deploys tab choose **Deploy latest commit** (or use its authenticated API action). Wait for status **Live** and confirm the deployed commit matches GitHub. To enable future auto-deploys, connect GitHub in Render Account Settings → Git Deployment Credentials and ensure the site is linked to that provider repository. See https://render.com/docs/deploys.
 - **Create or edit polls:** Supabase dashboard → Table Editor → `public.buylink_polls`. Each `slug` must be unique. Set `status` to `active` to show or `closed` to hide; new polls require matching social preview pages if you want individual links to work from direct messages.
 - **Review demand:** Supabase Table Editor → `buylink_votes` for votes and `buylink_interests` for optional budget/quantity interest. Do not treat votes as paid orders.
 - **Find problems:** Render → Events/Logs for deployment errors; Supabase → Logs for API errors.
