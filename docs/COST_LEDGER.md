@@ -10,3 +10,5 @@ Budget cap: CNY 1,000. Labor is excluded from the qualified-buyer data-cost metr
 
 Current external spend: **CNY 0**.
 
+
+PickVela static-site image correction, 2026-11-13: **CNY 0 new external spend**. Existing Render service usage was not separately billed or audited in this change.

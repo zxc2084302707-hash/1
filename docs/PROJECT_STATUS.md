@@ -33,3 +33,7 @@ Foundation implementation complete on the current branch. Current verification:
 
 S0 cannot be evaluated because there is no eligible real buyer dataset, supplier review sample, or written provider authorization. Next, provision a disposable Supabase development database, run the migration and RLS tests, then design the lawful real-data acquisition pilot under the CNY 1,000 cap.
 
+
+## PickVela site maintenance · 2026-11-13
+
+The separate `buylink-ng-free` static-site branch corrected Pexels photo 11031636 from `.jpeg` (HTTP 404) to `.png` (HTTP 200). This does not change the Africa Buyer AI S0 state above. Checks for this change: `node --check docs/app.js`; `bun run typecheck`; `bun run test:run` (26 passed); `bun run lint` (passed after declaring static-site browser globals and removing dead no-op code); `bun run build` (passed); `bun run test:mobile` (10 passed). The PickVela public vote-flow and Nigerian mobile-network checks remain unrun.

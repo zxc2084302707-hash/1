@@ -13,3 +13,7 @@
 - Supplier acceptance needs a distinct `(supplier, buyer)` sample tied to the eligible real-buyer population. Extra incomplete suppliers must not invalidate three completed ten-record samples.
 - RLS approval safety depends on insert constraints as well as update policies. Pending-only inserts, reviewer-only transitions, and database audit triggers prevent pre-approved rows and preserve decision history.
 
+
+## 2026-11-13 · PickVela static-site maintenance
+
+- Pexels asset 11031636 is a PNG even though other site photo URLs are JPEG. Check actual CDN content and response codes instead of deriving extensions from neighboring assets.

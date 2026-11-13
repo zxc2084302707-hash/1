@@ -16,6 +16,6 @@ Photos may be used on websites and social media without mandatory attribution, b
 | Hair pins | 36553497 | Pearl hairpins on display | https://www.pexels.com/photo/elegant-pearl-hairpins-with-perfume-on-wooden-surface-36553497/ |
 | Headband | 5500526 | Woman wearing colorful headband | https://www.pexels.com/photo/woman-wearing-headband-looking-at-the-camera-5500526/ |
 
-Images are loaded from Pexels CDN at `https://images.pexels.com/photos/ID/pexels-photo-ID.jpeg` with size/compression parameters. If a third-party image fails to load, the page falls back to its original emoji icon; **do not promise all links have been independently tested on a Nigerian network**.
+Images are loaded from Pexels CDN with size/compression parameters. Most use `pexels-photo-ID.jpeg`; photo 11031636 is served as `pexels-photo-11031636.png`. If a third-party image fails to load, the page falls back to its original emoji icon; **do not promise all links have been independently tested on a Nigerian network**.
 
 Do not invent product specifications, stock or MOQ based on these photos. When actual buying/sourcing begins, request licensed real supplier photos for the exact SKU and replace these references.
