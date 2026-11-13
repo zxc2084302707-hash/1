@@ -13,3 +13,9 @@
 - Supplier acceptance needs a distinct `(supplier, buyer)` sample tied to the eligible real-buyer population. Extra incomplete suppliers must not invalidate three completed ten-record samples.
 - RLS approval safety depends on insert constraints as well as update policies. Pending-only inserts, reviewer-only transitions, and database audit triggers prevent pre-approved rows and preserve decision history.
 
+
+## 2026-11-13 · PickVela video cycle
+
+- A photo's Pexels CDN extension may differ from `.jpeg`: photo 11031636 serves as `.png`, while the `.jpeg` hotlink returns HTTP 404. Check the actual image response before batch media or website reuse.
+- Metricool review scheduling requires the actual TikTok network to be connected to the selected brand. A connected Metricool plugin alone does not establish that link.
+- The old private ChatGPT conversation URL had no readable content through the available reader; repository documents can support an evidence-marked handoff but cannot substitute for unknown chat history.

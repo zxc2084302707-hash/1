@@ -10,3 +10,5 @@ Budget cap: CNY 1,000. Labor is excluded from the qualified-buyer data-cost metr
 
 Current external spend: **CNY 0**.
 
+
+Separate PickVela video cycle, 2026-11-13: **CNY 0 new external spend**. Four videos used the existing Pexels reference images, local rendering and locally synthesized instrumental audio. No paid generation or advertising was used; existing Render service fees are outside this video-cycle figure and have not been independently audited here.

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hair",
+    "a": "scrunchies",
+    "b": "clips",
+    "hook": "HAIR PICK: A OR B?",
+    "a_label": "SCRUNCHIES",
+    "b_label": "CLAW CLIPS",
+    "a_pivot": "SATIN STYLE?",
+    "b_pivot": "CLAW STYLE?",
+    "mid": "WHICH ONE IS YOU?",
+    "accent": "#6E43C7",
+    "accent2": "#FF729D",
+    "slug": "scrunchies-or-clips",
+    "caption": "Team scrunchies or team claw clips? Pick A or B for your everyday hair style. Vote on PickVela. Free style poll, no checkout. https://buylink-ng.onrender.com/p/scrunchies-or-clips/?src=tiktok #Nigeria #HairAccessories #PickVela"
+  },
+  {
+    "id": "bags",
+    "a": "crossbody",
+    "b": "tote",
+    "hook": "YOUR DAILY BAG?",
+    "a_label": "CROSSBODY",
+    "b_label": "CANVAS TOTE",
+    "a_pivot": "CARRY LIGHT?",
+    "b_pivot": "BRING MORE?",
+    "mid": "WHICH ONE FITS?",
+    "accent": "#52B6A4",
+    "accent2": "#F5AF61",
+    "slug": "crossbody-or-tote",
+    "caption": "Going out today: crossbody or canvas tote? A or B? Choose your style on PickVela. Free poll, no checkout. https://buylink-ng.onrender.com/p/crossbody-or-tote/?src=tiktok #Nigeria #BagStyle #PickVela"
+  },
+  {
+    "id": "carry",
+    "a": "organiser",
+    "b": "pouch",
+    "hook": "PACKING: A OR B?",
+    "a_label": "JEWELLERY BOX",
+    "b_label": "ZIP POUCH",
+    "a_pivot": "SORTED SPACE?",
+    "b_pivot": "SMALL POUCH?",
+    "mid": "WHICH WOULD YOU PICK?",
+    "accent": "#9674C5",
+    "accent2": "#F27797",
+    "slug": "organiser-or-pouch",
+    "caption": "For your small essentials: a jewellery organiser or a zip pouch? Pick A or B on PickVela. Style references only; no checkout. https://buylink-ng.onrender.com/p/organiser-or-pouch/?src=tiktok #Nigeria #EverydayStyle #PickVela"
+  },
+  {
+    "id": "hair_details",
+    "a": "pins",
+    "b": "headbands",
+    "hook": "HAIR DETAIL: A OR B?",
+    "a_label": "PEARL PINS",
+    "b_label": "HEADBAND",
+    "a_pivot": "SUBTLE DETAIL?",
+    "b_pivot": "COLOUR POP?",
+    "mid": "WHICH ONE IS YOU?",
+    "accent": "#BD875D",
+    "accent2": "#6DAF9A",
+    "slug": "pins-or-headbands",
+    "caption": "Pearl hair pins or a colourful headband? Which style would you actually choose? Vote A or B on PickVela. Style references only. https://buylink-ng.onrender.com/p/pins-or-headbands/?src=tiktok #Nigeria #HairAccessories #PickVela"
+  }
+]

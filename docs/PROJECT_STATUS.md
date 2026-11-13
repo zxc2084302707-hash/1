@@ -33,3 +33,7 @@ Foundation implementation complete on the current branch. Current verification:
 
 S0 cannot be evaluated because there is no eligible real buyer dataset, supplier review sample, or written provider authorization. Next, provision a disposable Supabase development database, run the migration and RLS tests, then design the lawful real-data acquisition pilot under the CNY 1,000 cap.
 
+
+## Separate PickVela delivery branch · 2026-11-13
+
+PickVela is the separate public style-poll site on the `buylink-ng-free` branch, hosted at https://buylink-ng.onrender.com. The `pickvela-video-delivery` branch contains four prepared 15-second TikTok review videos and covers. The four direct poll pages returned HTTP 200 and all four MP4s were checked by `ffprobe` and full FFmpeg decode. TikTok was not connected to the Metricool brand and no post was published. The supplied ChatGPT project-conversation link returned no readable content, so the handoff relies on repository documents and live service metadata. The existing S0 state above belongs to the separate Africa Buyer AI project and is unchanged.

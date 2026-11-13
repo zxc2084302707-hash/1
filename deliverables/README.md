@@ -1,5 +1,10 @@
 # PickVela video delivery
 
+**Current review pack:** [batch-2026-11-13](batch-2026-11-13/) contains four 15-second videos, covers, captions, project handoff and source files.
+
+The files below are older versions of the first hair poll.
+
+
 ## Recommended version
 
 Download `pickvela-scrunchies-vs-clips-v2-15s.mp4` for the updated 15-second 1080x1920 video. It is a style-poll video with English on-screen text, an original instrumental beat, and no narration. It asks viewers to choose A or B and links to the PickVela poll site. The two images are Pexels style references, not verified stock or supplier listings. No vote totals appear.
