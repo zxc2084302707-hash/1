@@ -23,13 +23,13 @@ Public header/footer/meta/WhatsApp-share text changed to PickVela. Social previe
 ## TikTok account creation preparation (not yet registered)
 
 Intended display name: **PickVela | A or B?**
-Username candidates (not verified or reserved): `@pickvela`, `@pickvela.picks`, `@pickvelahq`.
+**Actual user-supplied handle:** `@pickvela0`.
 Short bio: `Nigeria first 🇳🇬 Two product styles. One quick vote. No checkout.`
 Website target once link permitted: `https://buylink-ng.onrender.com/?src=tiktok`
 
-Use the owner's designated secondary Gmail address. Do not write the address or TikTok password in a public repository. Creating a TikTok account requires the owner's own verified session and email/phone verification, and possibly TikTok anti-bot checks. The current Gmail connection belongs to the existing primary Gmail, not necessarily the intended secondary one. **No TikTok account has been created by this project.**
+Use the owner's designated secondary Gmail address. Do not write the address or TikTok password in a public repository. Creating a TikTok account requires the owner's own verified session and email/phone verification, and possibly TikTok anti-bot checks. The current Gmail connection belongs to the existing primary Gmail, not necessarily the intended secondary one. **TikTok account URL supplied by the owner:** https://www.tiktok.com/@pickvela0 . The account was created independently; this assistant has not logged into TikTok or independently verified profile settings.
 
-TikTok site-link eligibility depends on account type, follower count, business verification and region. Do NOT assume a new account gets a clickable website bio link. Begin with clear brand naming and WhatsApp distribution, use a true clickable link only if TikTok grants it.
+Configure username `@pickvela0`, display name `PickVela | A or B?`, and profile bio within the official TikTok app; these fields have not been edited by the assistant. TikTok site-link eligibility depends on account type, follower count, business verification and region. Do NOT assume a new account gets a clickable website bio link. Begin with clear brand naming and WhatsApp distribution, use a true clickable link only if TikTok grants it.
 
 ## Priority after registration
 
