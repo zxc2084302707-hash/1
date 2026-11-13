@@ -1,4 +1,4 @@
-# BuyLink NG · Week 1 Cold Start (Nigeria)
+# PickVela · Week 1 Cold Start (Nigeria)
 
 ## Operating principle
 One human operator, one phone, $0 ad spend, no paid influencer or extra accounts. Site https://buylink-ng.onrender.com already exists and the WhatsApp Channel is https://whatsapp.com/channel/0029Vb9IWzl7YSd20eU4SC0c.
@@ -12,17 +12,17 @@ Local catalogue presence checked, but not a procurement verification:
 This establishes that product types are listed in Nigeria, NOT that these exact photos/SKUs have reliable suppliers or known economics. Do not use marketplace copyrighted photos; use licensed reference photography instead.
 
 ## Account settings (one TikTok account)
-Candidate display name: **BuyLink NG | You Pick**.
-Candidate handles (availability must be checked in TikTok): `@buylinkng`, `@buylink.ng`, `@buylinknghq`.
+Candidate display name: **PickVela | A or B?**.
+Candidate handles (availability must be checked in TikTok): `@pickvela`, `@pickvela.picks`, `@pickvelahq`.
 English bio:
-**Nigeria 🇳🇬 | Two picks. One vote. See what others choose. Free, no shopping. 👇**
+**Two styles. One vote. Real results. Starting in Nigeria 🇳🇬**
 Website: https://buylink-ng.onrender.com/?src=tiktok
 
 TikTok account setup may request account/security confirmation, depending on region. Use own legitimate credentials; don't rent multiple accounts or bypass region checks. Official documentation says personal accounts with 1,000+ followers may add profile links, while Business accounts can add a website link; availability and business verification can vary. Check actual profile UI before calling anything clickable. Business content must use properly licensed sound, ideally TikTok Commercial Music Library or original voiceover.
 
 ## Publish sequence for first 7 days
 - **D1 — Website + Channel:** Verify product-reference images load on a Nigerian mobile network and screenshots. Post WhatsApp poll #1. Ask 10 personal contacts voluntarily (not mass blasting) to vote once and provide honest usability feedback. Record outreach channel count separate from poll count.
-- **D2 — TikTok 01:** 15-second first A/B hair accessories video. Screen-record BuyLink voting page; do not claim "most popular" with tiny counts.
+- **D2 — TikTok 01:** 15-second first A/B hair accessories video. Screen-record PickVela voting page; do not claim "most popular" with tiny counts.
 - **D3 — Community seeding:** Ask admins for permission before posting in 1 or 2 relevant women's style/consumer-choice WhatsApp communities. Ask "Which would you pick and why?" not "buy now".
 - **D4 — TikTok 02:** Crossbody versus tote. Use new licensed photo options displayed on website.
 - **D5 — Channel 02:** Open bags poll and share link with label `src=wa_channel`. Observe referrals and discuss user replies.
@@ -39,21 +39,21 @@ Produce from one phone using its screen recording and native TikTok editor; no p
 2–4 sec: Show real reference photo B, text **"Scrunchies or claw clips?"**
 4–8 sec: Screen record opening https://buylink-ng.onrender.com/p/scrunchies-or-clips/?src=tiktok
 8–12 sec: Tap A or B and show actual results (do not change results to exaggerate).
-12–15 sec: Text **"Pick yours · BuyLink NG · Free poll"**.
+12–15 sec: Text **"Pick yours · PickVela · Free poll"**.
 
-English voice (optional): “Quick one, Nigeria. Which would you actually choose for everyday hair: satin scrunchies or claw clips? Vote on BuyLink NG and send your pick to a friend.”
+English voice (optional): “Quick one, Nigeria. Which would you actually choose for everyday hair: satin scrunchies or claw clips? Vote on PickVela and send your pick to a friend.”
 
 Caption:
-“Team scrunchies 🎀 or team claw clips? I’m testing something small for Nigeria: two styles, one vote, real results. Vote at BuyLink NG. No checkout. #Nigeria #NaijaStyle #HairAccessories”
+“Team scrunchies 🎀 or team claw clips? I’m testing something small for Nigeria: two styles, one vote, real results. Vote at PickVela. No checkout. #Nigeria #NaijaStyle #HairAccessories”
 
 ### Video 02: Bags, ~15 sec
 0–3s: “Going out: carry less or carry everything?”
 3–7s: Crossbody photo A vs tote photo B
 7–12s: Real app vote and result
-12–15s: “Your pick? BuyLink NG.”
+12–15s: “Your pick? PickVela.”
 Voice: “Crossbody bag or canvas tote for your everyday errands? I’d love to see what people in Nigeria prefer.”
 Caption:
-“Which bag fits your day better? 👜 Crossbody vs canvas tote. Vote on BuyLink NG — no sign-up, just a quick pick. #Nigeria #EverydayStyle #BagStyle”
+“Which bag fits your day better? 👜 Crossbody vs canvas tote. Vote on PickVela — no sign-up, just a quick pick. #Nigeria #EverydayStyle #BagStyle”
 
 ### Video 03: Explain purpose, ~18 sec
 0–3s: “Why are we asking people to vote?”
@@ -61,10 +61,10 @@ Caption:
 8–13s: “To learn what people actually prefer BEFORE sourcing anything.”
 13–18s: “Your choices shape what we explore next. No payment.”
 Caption:
-“We’re not pretending to have a shop full of products. BuyLink NG is an early experiment: discover everyday styles, vote, see actual results. Your feedback matters. 🇳🇬 #Nigeria #ConsumerChoices”
+“We’re not pretending to have a shop full of products. PickVela is an early experiment: discover everyday styles, vote, see actual results. Your feedback matters. 🇳🇬 #Nigeria #ConsumerChoices”
 
 ## WhatsApp Channel launch message (ready to paste)
-🇳🇬 Quick pick from BuyLink NG!
+🇳🇬 Quick pick from PickVela!
 
 Satin scrunchies or claw clips — which would you actually use for everyday hair?
 
