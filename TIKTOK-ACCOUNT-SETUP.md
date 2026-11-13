@@ -1,14 +1,14 @@
 # PickVela — TikTok account launch kit (for account owner)
 
-**Status: Prepared, NOT registered.** This public file contains NO Gmail addresses, passwords, codes, or recovery details.
+**Status: Account URL supplied by owner (TikTok settings NOT modified by assistant).** This public file contains NO Gmail addresses, passwords, codes, or recovery details.
 
 ## Account setup
 
 - Platform: TikTok official signup https://www.tiktok.com/signup
-- Registration: use owner's own eligible email address, true date of birth, code verification and normal TikTok signup flow
+- Account supplied by owner: https://www.tiktok.com/@pickvela0 . No new signup needed.
 - Account type: brand project → consider Business Account once created. TikTok says Business Accounts can put a web link in profile, but availability / verification / regional restrictions need checking in the real TikTok profile.
 - Display name: **PickVela | A or B?**
-- Handle preference (check actual availability): **@pickvela**, then **@pickvela.picks**, then **@pickvelahq**
+- Handle: **@pickvela0** (owner supplied); do not change without an explicit rebrand decision
 - Category: Product / service or creator, whichever actual choices TikTok allows
 - Location: Nigeria is initial audience, not an identity claim about the operator
 - Bio: **Two styles. One vote. Real results. Starting in Nigeria 🇳🇬**
@@ -46,4 +46,4 @@ Use a **real phone screen recording of live PickVela pages**, original spoken En
 - Metrics: pilot votes, distinct browser identifiers, shares and interest recorded in Supabase are directional; not proof of 100 unique Nigerians.
 
 ## Secure next step
-Owner completes TikTok registration and verification in official app. Once the profile is created, provide profile link and any signup blocker screenshot (without codes) so subsequent profile review and post workflow can be continued.
+Owner has supplied profile link https://www.tiktok.com/@pickvela0. In TikTok → Edit profile, set display name and bio and upload an authorized brand avatar. Try Links → Add website if eligible. Turn on 2-step verification; rotate any password accidentally shared in chat. Then connect TikTok to a supported publishing platform if the user authorizes that connection. No password or 2FA code should be sent in chat or stored in the repository.
