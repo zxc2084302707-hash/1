@@ -12,8 +12,8 @@ Local catalogue presence checked, but not a procurement verification:
 This establishes that product types are listed in Nigeria, NOT that these exact photos/SKUs have reliable suppliers or known economics. Do not use marketplace copyrighted photos; use licensed reference photography instead.
 
 ## Account settings (one TikTok account)
-Candidate display name: **PickVela | A or B?**.
-Candidate handles (availability must be checked in TikTok): `@pickvela`, `@pickvela.picks`, `@pickvelahq`.
+Display name to configure: **PickVela | A or B?**.
+Existing account supplied by owner: **@pickvela0** → https://www.tiktok.com/@pickvela0.
 English bio:
 **Two styles. One vote. Real results. Starting in Nigeria 🇳🇬**
 Website: https://buylink-ng.onrender.com/?src=tiktok
