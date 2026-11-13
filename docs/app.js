@@ -6,7 +6,10 @@ const CHANNEL='https://whatsapp.com/channel/0029Vb9IWzl7YSd20eU4SC0c';
 const $app=document.getElementById('app');
 const icons={scrunchies:['🎀','SCRUNCHIES'],clips:['🦋','CLIPS'],crossbody:['👜','BAG'],tote:['🛍️','TOTE'],organiser:['💍','JEWELLERY'],pouch:['👝','POUCH'],pins:['✨','PINS'],headbands:['🌈','BANDS']};
 const params=new URLSearchParams(window.location.search);
-const source=(params.get('src')||'direct').slice(0,24).replace(/[^a-zA-Z0-9_-]/g,'')||'direct';
+// Accept simple share tags (?src=tiktok) and standard UTM source tags
+// (?utm_source=tiktok). Tags are self-reported attribution, not proof of identity.
+const source=(params.get('src')||params.get('utm_source')||'direct')
+  .slice(0,24).replace(/[^a-zA-Z0-9_-]/g,'')||'direct';
 let polls=[];
 const escapeHtml=(v)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function getDevice(){let val;try{val=localStorage.getItem('blng.device');if(!val){val=crypto.randomUUID();localStorage.setItem('blng.device',val)}}catch{val=crypto.randomUUID()}return val}
