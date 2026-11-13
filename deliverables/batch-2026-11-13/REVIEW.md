@@ -2,6 +2,8 @@
 
 Status: files prepared for owner review. No TikTok upload or publication has happened.
 
+For one download, use `pickvela-review-pack.zip`; it contains the four MP4s, four covers, matching avatar and these review notes. The individual files are also available in this folder.
+
 | Order | Video / cover | Poll | Suggested caption |
 | --- | --- | --- | --- |
 | 01 | `hair-final.mp4` / `hair-cover.jpg` | [Scrunchies or clips](https://buylink-ng.onrender.com/p/scrunchies-or-clips/?src=tiktok) | Team scrunchies or team claw clips? Pick A or B for your everyday hair style. Vote on PickVela. Free style poll, no checkout. https://buylink-ng.onrender.com/p/scrunchies-or-clips/?src=tiktok #Nigeria #HairAccessories #PickVela |
@@ -18,12 +20,12 @@ Each is a 15-second, 1080×1920 H.264/AAC MP4 with English screen text, original
 - Bio: `Nigeria first 🇳🇬 Two product styles. One quick vote. No checkout.`
 - Website field if available in the real account: `https://buylink-ng.onrender.com/?src=tiktok`
 - Category when prompted: product/service or creator, based on options actually shown.
-- Profile photo: authorized PickVela logo/avatar. None was created or uploaded in this cycle.
+- Profile photo: `pickvela-avatar.png`, a prepared green PickVela avatar matching the site's logo colors. It has not been uploaded to TikTok.
 - Do not claim that the bio link is clickable until checked inside the account. Plain links in video captions also may not be clickable.
 
 ## Review and scheduling state
 
-The connected Metricool brand is blog ID `7323276`. Its `getBrandSettings` response on 2026-11-13 says no social network is connected, so no TikTok draft or review queue could be created. Connection page: https://app.metricool.com/brands/connections?blogId=7323276 . Connect only the owner's @pickvela0 account, then confirm the resulting account identity before uploading. The user will review all four in Metricool before publication; do not publish automatically.
+The connected Metricool brand is blog ID `7323276`. Its `getBrandSettings` response was rechecked on 2026-11-13 and still says no social network is connected, so no TikTok draft or review queue could be created. Connection page: https://app.metricool.com/brands/connections?blogId=7323276 . Connect only the owner's @pickvela0 account, then confirm the resulting account identity before uploading. The user will review all four in Metricool before publication; do not publish automatically.
 
 ## Benchmark method and limits
 
