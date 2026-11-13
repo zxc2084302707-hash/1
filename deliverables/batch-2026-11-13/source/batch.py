@@ -53,11 +53,11 @@ def make(pack,t,A,B):
   draw_text(im,'COMMENT A OR B',360,817,56,accent)
   draw_text(im,'Then vote on PickVela',360,884,31,ink,bold=False)
  else:
-  p=(t-11.2)/3.8;im=Image.new('RGB',(W,H),ink);brand(im,True)
+  p=(t-11.2)/3.8;im=Image.new('RGB',(W,H),'#174F3D');brand(im,True)
   photo(im,A,(40,225,345,620),p);photo(im,B,(375,225,680,620),p)
   draw_text(im,'PICK A OR B',360,685,70,'white')
-  rr(im,(65,735,655,825),30,accent);draw_text(im,'VOTE FOR FREE',360,780,47,'white')
-  draw_text(im,'PickVela  ·  link in caption',360,887,28,'white')
+  rr(im,(65,735,655,825),30,cream);draw_text(im,'VOTE ON PICKVELA',360,780,43,'#174F3D')
+  draw_text(im,'buylink-ng.onrender.com',360,887,30,'white')
   draw_text(im,'Style reference photos  |  Pexels',360,1220,20,'#C9CCD0',bold=False)
  return im
 
