@@ -23,3 +23,4 @@
 - Keeping a referral label only in JavaScript memory loses attribution when a visitor refreshes or opens a poll in a new tab. Put the source on navigable poll URLs and test the URL after reload.
 - A page link with only a generic title and no `og:image` gives WhatsApp recipients little context. A static image per poll and a sender-choice challenge can be tested without storing names, phone numbers or unverifiable referral counts.
 - A WhatsApp Channel with no measured audience is a destination for public-content viewers, not an acquisition source by itself. The owner ruled out personal-contact seeding because that audience is not targeted; future cold-start tests must separate public reach from site votes.
+- A green Account Check is evidence about the tool's covered issues, not a guarantee of per-post recommendation. Test native participation when a profile has no website field, and keep platform comments separate from the website pilot's participant count.

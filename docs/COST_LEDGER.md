@@ -18,3 +18,5 @@ PickVela mobile voting-path update, 2026-11-14: **CNY 0 new external spend**. Ex
 PickVela share-challenge and social-preview update, 2026-11-14: **CNY 0 new external spend**. Four previews use the site's existing Pexels reference photos and the existing Render static host.
 
 PickVela public cold-start launch kit, 2026-11-14: **CNY 0 new external spend**. Existing assets and channels only; no ad purchase or paid creator engagement.
+
+PickVela account review and one bag comment test, 2026-11-14: **CNY 0 new external spend**. Existing photo references and original instrumental reused; no paid generation, promotion or account-management service.

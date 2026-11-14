@@ -50,7 +50,7 @@ select * from buylink_internal.pilot_sources order by votes_after_start desc;
 ## 3. 7 天首轮执行：优先真实反馈，不追求假繁荣
 
 - **Day 0：** 现有 WhatsApp Channel 管理员将旧品牌资料改为 PickVela，并发布第一组带 `src=wa_channel` 的投票链接。不向本人 WhatsApp 好友拉票；该人群不精准。
-- **Day 1–3：** 已发布的首条 TikTok 保留；依次使用现有的包、收纳、发饰视频，围绕具体使用场景询问 A/B 和理由。用公开内容争取尼日利亚目标受众，不把频道当作自带流量池。
+- **Day 1–3：** 已发布的首条 TikTok 保留，先核查单条作品推荐资格和后台数据；审核包袋场景新测试片后再决定发布。其余现有视频保留，按真实反馈选择下一条，围绕具体使用场景询问 A/B 和理由。用公开内容争取尼日利亚目标受众，不把频道当作自带流量池。
 - **Day 4–7：** 核对 TikTok 后台观看、互动与受众地区；分别查看 Supabase 的到站投票、来源和分享点击。如进入相关公开社群，先遵守社群规则并取得必要许可。
 
 可直接复制的频道资料、视频链接和配文见 `PICKVELA-PUBLIC-LAUNCH-KIT.md`。

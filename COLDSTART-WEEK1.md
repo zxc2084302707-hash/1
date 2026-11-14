@@ -12,19 +12,19 @@ Local catalogue presence checked, but not a procurement verification:
 This establishes that product types are listed in Nigeria, NOT that these exact photos/SKUs have reliable suppliers or known economics. Do not use marketplace copyrighted photos; use licensed reference photography instead.
 
 ## Account settings (one TikTok account)
-Display name to configure: **PickVela | A or B?**.
+Display name to configure: **PickVela | Style Picks**.
 Existing account supplied by owner: **@pickvela0** → https://www.tiktok.com/@pickvela0.
 English bio:
-**Two styles. One vote. Real results. Starting in Nigeria 🇳🇬**
+**Everyday style choices for Nigeria 🇳🇬** followed by **A or B? Tell us why.**
 Website: https://buylink-ng.onrender.com/?src=tiktok
 
 TikTok account setup may request account/security confirmation, depending on region. Use own legitimate credentials; don't rent multiple accounts or bypass region checks. Official documentation says personal accounts with 1,000+ followers may add profile links, while Business accounts can add a website link; availability and business verification can vary. Check actual profile UI before calling anything clickable. Business content must use properly licensed sound, ideally TikTok Commercial Music Library or original voiceover.
 
 ## Current public cold-start sequence (owner correction, 2026-11-14)
 - **D0 — Existing Channel:** Owner/admin updates BuyLink NG name, description and icon to PickVela and posts the first direct poll link. No recruitment from the owner's personal WhatsApp contacts.
-- **D1 — TikTok 02:** The hair video is already public. Post the existing bags video with a concrete errand question and request A/B plus a reason in public comments.
-- **D2 — TikTok 03:** Post the existing organiser/pouch video at a different test time. Respond to genuine relevant comments; do not paste links into unrelated threads.
-- **D3 — TikTok 04:** Post the existing hair-details video. Ask a new use-case question. Do not invent votes or testimonials.
+- **D1 — TikTok 02:** The hair video is already public and Account Check shows no unresolved issues. Verify its individual post eligibility, disclosure and sound, then review the new bags-comment-test candidate with an errand scenario and native comment question.
+- **D2 — Read the post:** Inspect actual impressions, recommendation eligibility, watch time, shares and countries. If still zero with no eligibility notice after the chosen diagnostic interval, report the specific post problem through TikTok; do not mass upload similar templates.
+- **D3 — Choose from evidence:** Respond to actual comments or select a remaining original video with a useful new use-case question. No need to remake the other originals before this test produces evidence.
 - **D4–D7 — Read the funnel:** Separate owner-side TikTok views, watch time, comments, shares and audience location from Supabase poll votes, source tags and share-button taps. Test one permitted public Nigerian style community only if the community rules allow it.
 
 The copy-ready Channel profile, three MP4 links and captions are in `PICKVELA-PUBLIC-LAUNCH-KIT.md`. WhatsApp Channel is for retention and direct voting; public video is the primary discovery channel while its following is unknown.
