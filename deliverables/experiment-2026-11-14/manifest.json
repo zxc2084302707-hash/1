@@ -1,0 +1,72 @@
+{
+  "status": "owner review candidate; not published and not evidence of restored recommendation",
+  "experiment": "Bag choice for a quick stop versus changing plans; native TikTok comments instead of unavailable profile website link",
+  "video": "bags-comment-test.mp4",
+  "cover": "bags-comment-cover.jpg",
+  "contact_sheet": "contact-sheet.jpg",
+  "caption": "Quick errand or a full day out? Crossbody or tote — and what always ends up in your bag? 👜 #Nigeria #EverydayStyle #Bags",
+  "created_utc": "2026-11-14",
+  "cost_new_cny": 0,
+  "spoken_voice": false,
+  "generative_media_used": false,
+  "source_refs": [
+    {
+      "asset": "crossbody",
+      "existing_repo_path": "../batch-2026-11-13/source/crossbody.jpg",
+      "pexels_url": "https://www.pexels.com/photo/the-brown-leather-cross-body-bag-is-shown-on-a-table-27204286/",
+      "sha256": "a7b8a2357a9d5d6d909d02ebf4b7eda3dfc753898977bbc23c335cc3d67e5adc"
+    },
+    {
+      "asset": "tote",
+      "existing_repo_path": "../batch-2026-11-13/source/tote.jpg",
+      "pexels_url": "https://www.pexels.com/photo/canvas-tote-bag-with-books-and-dried-flowers-30382341/",
+      "sha256": "ce9456548d09fec7171dca167dabf90042ce9b7f93275e97a85f5f870f5093aa"
+    },
+    {
+      "asset": "music",
+      "existing_repo_path": "../batch-2026-11-13/source/music.py",
+      "provenance": "Exact existing seeded original synthesized beat; first 12 seconds with volume and fades only",
+      "music_script_sha256": "c382b47f42fd694a38f72999297e9fe7c3bf8807ee715e00ed06e579fbd1bc07",
+      "original_wav_sha256": "c1d4fdf650089fb81e01b84ce04a8bffe0aacbd9977ce9d7882f30ad193d5a03"
+    }
+  ],
+  "output_sha256": "e2ff9eb650a619c21441438a225bdf050580d872826a5ff8785121bbf75f2737",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "12.000000",
+      "size": "1661573"
+    }
+  },
+  "checks": {
+    "complete_decode": "pass",
+    "sample_frames_seconds": [
+      0.5,
+      3.8,
+      6.8,
+      11.5
+    ],
+    "audio_mean_db": -27.6,
+    "audio_peak_db": -8.8,
+    "unverified": [
+      "TikTok in-app safe-zone rendering on target device",
+      "actual recommendation eligibility",
+      "viewer retention or Nigerian audience response"
+    ]
+  }
+}
