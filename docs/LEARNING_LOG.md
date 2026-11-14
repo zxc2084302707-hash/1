@@ -17,3 +17,7 @@
 ## 2026-11-13 · PickVela static-site maintenance
 
 - Pexels asset 11031636 is a PNG even though other site photo URLs are JPEG. Check actual CDN content and response codes instead of deriving extensions from neighboring assets.
+
+## 2026-11-14 · PickVela mobile voting path
+
+- Keeping a referral label only in JavaScript memory loses attribution when a visitor refreshes or opens a poll in a new tab. Put the source on navigable poll URLs and test the URL after reload.

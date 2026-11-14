@@ -37,3 +37,11 @@ S0 cannot be evaluated because there is no eligible real buyer dataset, supplier
 ## PickVela site maintenance · 2026-11-13
 
 The separate `buylink-ng-free` static-site branch corrected Pexels photo 11031636 from `.jpeg` (HTTP 404) to `.png` (HTTP 200). This does not change the Africa Buyer AI S0 state above. Checks for this change: `node --check docs/app.js`; `bun run typecheck`; `bun run test:run` (26 passed); `bun run lint` (passed after declaring static-site browser globals and removing dead no-op code); `bun run build` (passed); `bun run test:mobile` (10 passed). The PickVela public vote-flow and Nigerian mobile-network checks remain unrun.
+
+## PickVela mobile voting path · 2026-11-14
+
+The PickVela-only static site now leads TikTok visitors to the first poll from a visible home CTA and the header. It keeps `src=tiktok` or another source on poll links, navigation, refresh and return, so referral labels do not silently become `direct`. Poll choices have a clear tap instruction and more readable mobile text; their two reference images load eagerly on direct poll pages. Prominent WhatsApp prompts were moved to the poll flow while the existing Channel still publicly describes the former wholesale brand; the footer retains the original Channel link.
+
+Local 375 px phone and 1280 px desktop screenshots were inspected. All four poll pages loaded their two images, and source-preserving navigation and no horizontal overflow were checked at 375 px. The browser smoke check intercepted `buylink_log_event` so it did not write test events. `node --check docs/app.js`, TypeScript, lint, build, 26 unit tests and 10 mobile tests passed. A real vote write and Nigerian-network test remain unrun.
+
+The first visual check against the live site, before local interception was added, generated a **test** `view` event (`id=6`, `source=tiktok`, 2026-11-14 01:14 UTC). An earlier Work screenshot generated another (`id=5`, 2026-11-13 09:34 UTC). Neither is a real TikTok visitor. They remain in the append-only raw events for provenance and must be excluded from organic traffic claims. A read-only check after this work still showed 1 post-baseline vote, sourced `chatgptcom`, and 0 new interest records or share-button taps.
