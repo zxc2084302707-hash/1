@@ -1,6 +1,6 @@
 # PickVela — TikTok account launch kit (for account owner)
 
-**Status: Account URL supplied by owner (TikTok settings NOT modified by assistant).** This public file contains NO Gmail addresses, passwords, codes, or recovery details.
+**Status 2026-11-14: Owner screenshots show PickVela display name/avatar and @pickvela0 handle. One public video URL is confirmed: https://www.tiktok.com/@pickvela0/video/7707837638136352030 . The owner’s Links screen shows Lemon8 but no Website field. TikTok settings were not modified by this assistant.** This public file contains NO Gmail addresses, passwords, codes, or recovery details.
 
 ## Account setup
 

@@ -18,3 +18,7 @@
 .poll-top .tap-instruction{display:inline-block;margin:-8px 0 20px;padding:8px 11px;border-radius:10px;background:#eef7ef;color:#155840;font-size:13px;font-weight:700}
 .photo-art .photo-reference{font-size:9px}
 @media(max-width:570px){.hero-cta{width:100%;min-height:48px}.choice p{font-size:12px;line-height:1.4}}
+
+.poll-top .friend-pick{margin:12px 0;padding:12px 14px;border-radius:12px;background:#eaf4ed;color:#165840;font-weight:750}
+.compare-pick{margin:7px 0 12px;color:#286e50;font-weight:700;font-size:14px}
+.share-prompt{margin:20px 0 0;font-size:14px;font-weight:700;color:#244c38}

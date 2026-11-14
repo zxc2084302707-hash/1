@@ -1,9 +1,9 @@
-# BuyLink NG｜尼日利亚首批 100 人试运营手册
+# PickVela｜尼日利亚首批 100 人试运营手册
 
 **项目目标：** 在不购买广告、没有本地团队、没有虚构数据的条件下，找到第一批愿意参与产品二选一投票的尼日利亚用户，并验证他们是否自然转发和愿意表达采购兴趣。
 
 **主站：** https://buylink-ng.onrender.com/
-**官方 WhatsApp Channel：** https://whatsapp.com/channel/0029Vb9IWzl7YSd20eU4SC0c
+**现有 WhatsApp Channel：** https://whatsapp.com/channel/0029Vb9IWzl7YSd20eU4SC0c （截至 2026-11-14，公开预览仍为旧品牌 BuyLink NG；需频道管理员在本人设备上更名）
 **GitHub：** `buylink-ng-free` 分支
 **托管：** Render 静态网站；`docs/` 发布目录
 **数据：** Supabase 免费项目。严禁在网站中暴露数据库 service_role/secret key。
@@ -45,12 +45,12 @@ select * from buylink_internal.pilot_sources order by votes_after_start desc;
 
 网站也已增加支持标准 `utm_source`：例如 `https://buylink-ng.onrender.com/?utm_source=tiktok`。当两个标签同时存在时优先使用 `src`。
 
-注意：用户在网页完成投票后点击网站的 WhatsApp 分享按钮，系统用 `src=whatsapp` 标记下游流量，因此不会完整保留上游传播链，也不是真正的多级邀请关系分析。
+注意：2026-11-14 网站更新后，用户投票并点击 WhatsApp 分享，会生成 `src=wa_friend&friend=a|b` 的挑战链接；复制链接生成 `src=share&friend=a|b`。这些参数表示分享者选择和方向性来源，不存储联系人、不证明实际转发成功，也不构成多级邀请关系分析。
 
 ## 3. 7 天首轮执行：优先真实反馈，不追求假繁荣
 
-- **Day 1：** 在 WhatsApp Channel 发布第一组二选一投票的短文案、带来源标签的网页链接；找 10–15 个真实熟人，自愿请他们帮忙用尼日利亚朋友的视角试用（不请求反复投票）。
-- **Day 2：** 手机录屏制作首条 10–15 秒英文 TikTok，真实展示投票操作和网站；无需制造“热卖”“现货”假象。
+- **Day 1：** 先由现有 WhatsApp Channel 管理员把旧品牌资料更新为 PickVela，再发布第一组带来源标签的投票；找 10–15 个愿意参与的人给出真实选择和体验反馈（不请求反复投票）。
+- **Day 2：** 查看已经发布的首条 TikTok `@pickvela0/video/7707837638136352030` 在账号后台的实际表现；公开链接本身不能证明观看量或受众地区。下一条继续沿用已完成的视频审核包，不无意义重做。
 - **Day 3：** 征得允许后在相关本地群组分享一次；避免非自愿私信轰炸和骚扰。
 - **Day 4：** 用 Supabase 查看来源/投票/兴趣；检查用户反馈问题，不是立即增加十种功能。
 - **Day 5：** 重点宣传第二组（crossbody vs tote），比较不同话题的自然互动。
@@ -63,7 +63,7 @@ WhatsApp Channel：
 
 > Quick question for anyone in Nigeria: for everyday hair, are you more of a satin scrunchie person or a claw clip person? 🎀
 >
-> I put together a simple two-choice poll for BuyLink NG. You can vote in a few seconds, see the actual results and share it with a friend.
+> I put together a simple two-choice poll for PickVela. You can vote in a few seconds, see the actual results and ask a friend if they'd choose the same.
 >
 > No sign-up, no shopping and no payment — just your pick.
 >
@@ -74,11 +74,11 @@ TikTok 15-second video shot list:
 - 0–3s: Show both simple concept illustrations in the site; on-screen: “Which would you actually pick?”
 - 3–8s: Screen record choosing a scrunchie or a clip; no fake results.
 - 8–12s: Show the actual result bars.
-- 12–15s: On-screen: “Vote on BuyLink NG · Free · Nigeria 🇳🇬”. Add site URL to TikTok profile if the account is eligible; otherwise use a clearly visible brand name and avoid claiming a clickable link when none exists.
+- 12–15s: On-screen: “PickVela · Free vote · Nigeria 🇳🇬”. The current account screenshot has no Website field, so avoid claiming a clickable TikTok profile link.
 
 English caption:
 
-> Quick one for Nigeria 🇳🇬: satin scrunchies or claw clips? We made a simple voting page to see what people actually prefer. No sign-up, no checkout. Pick yours on BuyLink NG and send it to a friend. #Nigeria #NaijaStyle #HairAccessories
+> Quick one for Nigeria 🇳🇬: satin scrunchies or claw clips? Which one would you use for everyday hair, and why? We're collecting honest picks on PickVela. No sign-up or checkout. #Nigeria #NaijaStyle #HairAccessories
 
 ## 5. 运营风险/边界
 

@@ -19,7 +19,7 @@ Render initial deployment succeeded on 2026-11-13. Third-party independent brows
 ## Everyday actions
 
 - **Share the site:** use https://buylink-ng.onrender.com/
-- **Share an individual poll:** on the poll page, use Share to WhatsApp or Copy link; each poll has a unique URL and its own social-preview title.
+- **Share an individual poll:** after voting, use Challenge a friend on WhatsApp or Copy challenge link. The shared URL carries the sender's A/B choice and opens the same poll directly. Each poll has its own title and photo preview. The `friend` parameter is a self-reported choice, not a verified referral identity.
 - **TikTok traffic:** use `https://buylink-ng.onrender.com/?src=tiktok` for the profile website field if TikTok offers one. The home and poll links retain `src=tiktok` as visitors navigate and refresh. The header and main home CTA take visitors directly to the first poll.
 - **Update text/layout:** edit website files in GitHub branch `buylink-ng-free` under `docs/`. Commit the change, then in Render → this site's Deploys tab choose **Deploy latest commit** (or use its authenticated API action). Wait for status **Live** and confirm the deployed commit matches GitHub. To enable future auto-deploys, connect GitHub in Render Account Settings → Git Deployment Credentials and ensure the site is linked to that provider repository. See https://render.com/docs/deploys.
 - **Create or edit polls:** Supabase dashboard → Table Editor → `public.buylink_polls`. Each `slug` must be unique. Set `status` to `active` to show or `closed` to hide; new polls require matching social preview pages if you want individual links to work from direct messages.
@@ -27,7 +27,7 @@ Render initial deployment succeeded on 2026-11-13. Third-party independent brows
 - **Find problems:** Render → Events/Logs for deployment errors; Supabase → Logs for API errors.
 - **Follow-up:** user must explicitly opt in for contact; current MVP collects no WhatsApp phone numbers or paid orders.
 
-The existing WhatsApp Channel invite link remains in the footer. Its public name and description still reflect the former BuyLink NG wholesale project as of 2026-11-14, so the main site prompts currently emphasize voting until the Channel owner updates its profile to PickVela.
+The existing WhatsApp Channel invite link remains in the footer. Its public name and description still reflect the former BuyLink NG wholesale project as of 2026-11-14, so the main site prompts currently emphasize voting until the Channel owner updates its profile to PickVela. Channel admin settings are not available through the current connected tools.
 
 ## Pilot test checklist
 

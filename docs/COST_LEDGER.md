@@ -14,3 +14,5 @@ Current external spend: **CNY 0**.
 PickVela static-site image correction, 2026-11-13: **CNY 0 new external spend**. Existing Render service usage was not separately billed or audited in this change.
 
 PickVela mobile voting-path update, 2026-11-14: **CNY 0 new external spend**. Existing GitHub, Render and Supabase resources were reused.
+
+PickVela share-challenge and social-preview update, 2026-11-14: **CNY 0 new external spend**. Four previews use the site's existing Pexels reference photos and the existing Render static host.
