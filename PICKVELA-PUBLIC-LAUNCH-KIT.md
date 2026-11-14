@@ -4,7 +4,7 @@ Prepared 2026-11-14. This replaces earlier suggestions to recruit from the owner
 
 ## Update the existing WhatsApp Channel
 
-Keep the existing channel URL: https://whatsapp.com/channel/0029Vb9IWzl7YSd20eU4SC0c . Its public preview still says BuyLink NG / wholesale until an authenticated admin changes it. In the WhatsApp app, open Updates → the existing channel → channel info → edit its name, description and icon. Do not create a replacement channel.
+Keep the existing channel URL: https://whatsapp.com/channel/0029Vb9IWzl7YSd20eU4SC0c . At 09:25 UTC on 2026-11-14, its public preview still used the **BuyLink NG** name, while its description had already shifted to everyday style choices and free research. In the WhatsApp app, open Updates → the existing channel → channel info; rename the channel and check the icon. Its description only needs editing if the owner prefers the shorter copy below. Do not create a replacement channel.
 
 - **Name:** `PickVela | Style Picks`
 - **Description:** `Everyday style choices for Nigeria 🇳🇬. Hair accessories, bags and A/B picks. Free polls. No products for sale.`
