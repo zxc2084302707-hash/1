@@ -16,3 +16,5 @@ PickVela static-site image correction, 2026-11-13: **CNY 0 new external spend**.
 PickVela mobile voting-path update, 2026-11-14: **CNY 0 new external spend**. Existing GitHub, Render and Supabase resources were reused.
 
 PickVela share-challenge and social-preview update, 2026-11-14: **CNY 0 new external spend**. Four previews use the site's existing Pexels reference photos and the existing Render static host.
+
+PickVela public cold-start launch kit, 2026-11-14: **CNY 0 new external spend**. Existing assets and channels only; no ad purchase or paid creator engagement.

@@ -20,14 +20,14 @@ Website: https://buylink-ng.onrender.com/?src=tiktok
 
 TikTok account setup may request account/security confirmation, depending on region. Use own legitimate credentials; don't rent multiple accounts or bypass region checks. Official documentation says personal accounts with 1,000+ followers may add profile links, while Business accounts can add a website link; availability and business verification can vary. Check actual profile UI before calling anything clickable. Business content must use properly licensed sound, ideally TikTok Commercial Music Library or original voiceover.
 
-## Publish sequence for first 7 days
-- **D1 — Website + Channel:** Verify product-reference images load on a Nigerian mobile network and screenshots. Post WhatsApp poll #1. Ask 10 personal contacts voluntarily (not mass blasting) to vote once and provide honest usability feedback. Record outreach channel count separate from poll count.
-- **D2 — TikTok 01:** 15-second first A/B hair accessories video. Screen-record PickVela voting page; do not claim "most popular" with tiny counts.
-- **D3 — Community seeding:** Ask admins for permission before posting in 1 or 2 relevant women's style/consumer-choice WhatsApp communities. Ask "Which would you pick and why?" not "buy now".
-- **D4 — TikTok 02:** Crossbody versus tote. Use new licensed photo options displayed on website.
-- **D5 — Channel 02:** Open bags poll and share link with label `src=wa_channel`. Observe referrals and discuss user replies.
-- **D6 — TikTok 03:** Which would you prefer for daily essentials? Use screenshots or viewer comments after permission.
-- **D7 — Review:** Supabase private pilot summary and per-source stats; log user-reported image issues, potential Nigerian audience fit, and abandonment points.
+## Current public cold-start sequence (owner correction, 2026-11-14)
+- **D0 — Existing Channel:** Owner/admin updates BuyLink NG name, description and icon to PickVela and posts the first direct poll link. No recruitment from the owner's personal WhatsApp contacts.
+- **D1 — TikTok 02:** The hair video is already public. Post the existing bags video with a concrete errand question and request A/B plus a reason in public comments.
+- **D2 — TikTok 03:** Post the existing organiser/pouch video at a different test time. Respond to genuine relevant comments; do not paste links into unrelated threads.
+- **D3 — TikTok 04:** Post the existing hair-details video. Ask a new use-case question. Do not invent votes or testimonials.
+- **D4–D7 — Read the funnel:** Separate owner-side TikTok views, watch time, comments, shares and audience location from Supabase poll votes, source tags and share-button taps. Test one permitted public Nigerian style community only if the community rules allow it.
+
+The copy-ready Channel profile, three MP4 links and captions are in `PICKVELA-PUBLIC-LAUNCH-KIT.md`. WhatsApp Channel is for retention and direct voting; public video is the primary discovery channel while its following is unknown.
 
 **First-week realistic hurdle:** 10–20 voluntary Nigerian participants and 3 usable qualitative responses. The project’s long-term experiment aims for 100 verified external people, but anonymous browser tokens alone cannot prove unique Nigerians.
 
