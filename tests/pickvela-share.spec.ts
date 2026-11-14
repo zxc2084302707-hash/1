@@ -14,6 +14,7 @@ const poll = {
   status: 'active',
   sort_order: 1,
 }
+const nextPoll = { ...poll, id: 2, slug: 'crossbody-or-tote', title: 'Crossbody or tote?', a_label: 'Crossbody', b_label: 'Tote', sort_order: 2 }
 
 test('a shared pick opens a direct challenge and keeps source attribution', async ({ page }) => {
   let voteSource = ''
@@ -27,7 +28,7 @@ test('a shared pick opens a direct challenge and keeps source attribution', asyn
     const url = route.request().url()
     const body = route.request().postDataJSON() as { p_src?: string } | null
     let data: unknown = null
-    if (url.includes('/buylink_polls?')) data = [poll]
+    if (url.includes('/buylink_polls?')) data = [poll, nextPoll]
     else if (url.includes('/buylink_cast_vote')) {
       voteSource = body?.p_src ?? ''
       data = 'a'
@@ -48,6 +49,10 @@ test('a shared pick opens a direct challenge and keeps source attribution', asyn
   expect(message).toContain('src=wa_friend')
   expect(message).toContain('friend=a')
   expect(voteSource).toBe('wa_friend')
+
+  await page.getByRole('button', { name: 'Try another pick →' }).click()
+  await expect(page).toHaveURL(/crossbody-or-tote/)
+  await expect(page.getByText(/A friend picked/)).toHaveCount(0)
 })
 
 test('each poll exposes a reachable image for WhatsApp link previews', async ({ request }) => {
