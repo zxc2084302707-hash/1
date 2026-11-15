@@ -1,5 +1,9 @@
 # PickVela — brand transition and TikTok launch preparation
-Date: 2026-11-13
+Date: 2026-11-13; current execution update: 2026-11-15
+
+## Current account/content direction · 2026-11-15
+
+Continue the existing PickVela project and `@pickvela0`. The current owner-side profile copy is **PickVela | Bag Buying Tips**, with bio `Bag-buying checks for Nigeria 🇳🇬` / `Size, details & the full cost.` The following older registration/A-or-B text is historical. The account already exists and two posts are public. New content will give practical before-buying information within TikTok; the website is an optional, separate research pilot until an actual profile entry and useful reason to visit are established. No new account or domain is required. See `TIKTOK-ACCOUNT-SETUP.md` for current actions.
 
 ## Why the name changed
 

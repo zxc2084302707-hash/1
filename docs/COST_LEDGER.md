@@ -24,3 +24,5 @@ PickVela account review and one bag comment test, 2026-11-14: **CNY 0 new extern
 PickVela second-post review, reference research, editorial correction and clipboard fallback repair, 2026-11-15: **CNY 0 new external spend**. No paid generation, promotion, new infrastructure or account-management service. Existing hosting and assets only.
 
 PickVela owner analytics screenshot review and reporting-diagnosis correction, 2026-11-15: **CNY 0 new external spend**. Documentation and official-source review only; no generation, promotion or deployment.
+
+PickVela owner-directed content/account repositioning and 24-second practical guide draft, 2026-11-15: **CNY 0 new external spend**. Existing licensed photo and original composition, local original animation/rendering, existing video branch. No paid tool, new service, ad or public post.

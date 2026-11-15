@@ -2,6 +2,12 @@
 
 Continue the existing @pickvela0, website, Supabase pilot and video branches. New external spend: CNY 0. This document supersedes the automatic remaining-video rollout in older launch plans. It does not authorize automatic posting or outreach.
 
+## Current execution priority after the owner's correction
+
+Stop using counter investigation as the main workstream. Prepare the useful-content draft now, while a specific statistics report can remain separate. The account's next positioning is **PickVela | Bag Buying Tips**, bio `Bag-buying checks for Nigeria 🇳🇬` / `Size, details & the full cost.` This is prepared owner-side copy, not an applied profile change. The next three content candidates are buying checks, fit checks and full-cost checks; no automatic publication or new paid service is authorized.
+
+The present TikTok-to-site plan has no confirmed clickable entry and no proven reason for viewers to repeat A/B on a separate site. Treat the website pilot's first-100 goal as blocked by distribution, while TikTok tests a useful content proposition inside the app. Preserve both projects and their separate counts. No new site feature or unverified Lemon8/QR/shortener workaround is represented as resolving the entry.
+
 ## Current evidence
 
 The owner reports the first video still has zero views and says the second was just published. Both public canonical pages were reachable at this check:
@@ -19,7 +25,7 @@ Supabase read-only summary: baseline after 2026-11-13 05:05:18 UTC; 1 new vote /
 
 ## The decision
 
-The first post's zero view counter conflicts with nonzero watch statistics. Resolve the reporting and traffic-source evidence before deciding that there was no distribution or grading creative retention. Separately, the existing stock-photo A/B format provides little guidance about buying, sizing, styling or use. Someone can answer the question mentally or in a TikTok comment without opening a website.
+The first post's zero view counter conflicts with nonzero watch statistics. Resolve the reporting and traffic-source evidence before deciding that there was no distribution or grading creative retention; this investigation is not a gate for producing the new content. Separately, the existing stock-photo A/B format provides little guidance about buying, sizing, styling or use. Someone can answer the question mentally or in a TikTok comment without opening a website.
 
 For now, the next editorial hypothesis is **before-buying checks for everyday bags**. Provide the whole useful answer inside TikTok. Keep the already-published posts, preserve all originals and pause the automatic carry/hair-details schedule. Do not make the owner's personal WhatsApp contacts the seed audience.
 

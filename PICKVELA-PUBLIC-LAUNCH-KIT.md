@@ -1,6 +1,10 @@
 # PickVela · public cold start kit (owner posts from phone)
 
-Updated 2026-11-15: the owner published the [second, bag-scenario post](https://www.tiktok.com/@pickvela0/video/7708209919073226015). Pause the automatic remaining-video schedule while checking the first post’s distribution. The current editorial decision and next script are in `PICKVELA-EDITORIAL-RESET-2026-11-15.md`.
+Current decision, 2026-11-15: shift the existing account to **PickVela | Bag Buying Tips**. Bio: `Bag-buying checks for Nigeria 🇳🇬` / `Size, details & the full cost.` The owner has published the [bag-scenario post](https://www.tiktok.com/@pickvela0/video/7708209919073226015), but future default posts are practical buying information, not the remaining A/B batch. Analytics troubleshooting does not block preparing the new material. The current account steps are in `TIKTOK-ACCOUNT-SETUP.md`; the earlier kit below remains historical/reference copy and does not automatically schedule a post.
+
+**Website entry:** no clickable TikTok Website field is confirmed. Make the complete content and question usable inside TikTok. The site-first 100-participant goal is still unmet; a native comment is not a site participant. Do not describe this as a live TikTok-to-website referral funnel.
+
+Current matching WhatsApp profile copy, prepared for the owner: name `PickVela | Bag Buying Tips`; description `Practical bag-buying checks for Nigeria 🇳🇬: sizes, closures and delivery costs. Independent tips; no products for sale.` The Channel stays optional; it is not a required extra hop around TikTok's missing Website field.
 
 Prepared 2026-11-14. This replaces earlier suggestions to recruit from the owner's personal WhatsApp contacts. Audience discovery starts with public TikTok content aimed at Nigerian viewers; the existing WhatsApp Channel is a place for returning viewers and direct poll links. Posting to an empty channel alone does not create reach. No paid ads or new accounts are required.
 
