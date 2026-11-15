@@ -1,0 +1,66 @@
+{
+  "status": "owner review draft; not published; not proof of reach improvement",
+  "created_utc": "2026-11-15",
+  "duration_seconds": 24,
+  "new_external_cost_cny": 0,
+  "spoken_voice": false,
+  "generative_media_used": false,
+  "caption": "Buying a bag online? A photo is only the start. Ask about the measurements, the closure and delivery to your city. Which do you check first? #BagShopping #ShoppingTips #Nigeria",
+  "assets": [
+    {
+      "file": "source/crossbody.jpg",
+      "origin": "Existing licensed Pexels style-reference photograph, not verified stock or a personally tested item",
+      "source_url": "https://www.pexels.com/photo/the-brown-leather-cross-body-bag-is-shown-on-a-table-27204286/",
+      "sha256": "a7b8a2357a9d5d6d909d02ebf4b7eda3dfc753898977bbc23c335cc3d67e5adc"
+    },
+    {
+      "file": "source/music.py",
+      "origin": "Existing original seeded synthesized instrumental; generated unchanged in temporary directory, looped to 24 seconds and faded",
+      "sha256": "c382b47f42fd694a38f72999297e9fe7c3bf8807ee715e00ed06e579fbd1bc07"
+    },
+    {
+      "file": "source/render.py",
+      "origin": "Original conceptual measurement, zipper and price-formula illustrations; not a real product specification or test",
+      "sha256": "61b6bcc99223e67730e8341b966d3b6e7339e21f5e57774412ecbc7f0bfaa3c9"
+    }
+  ],
+  "output_sha256": "f004f5f5601d4f91b3ca021b003a4a2dad1f59191d5a2887a37de9d0f3a21e46",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "24.000000",
+      "size": "1337551"
+    }
+  },
+  "checks": {
+    "full_decode": "pass",
+    "sample_frames_seconds": [
+      1.5,
+      5.8,
+      11.2,
+      17,
+      22.5
+    ],
+    "essential_safe_area": "main information placed x<930 and above y=1560",
+    "unverified": [
+      "in-app overlays on owner phone",
+      "viewer retention and recommendation",
+      "Nigerian audience reach"
+    ]
+  }
+}
