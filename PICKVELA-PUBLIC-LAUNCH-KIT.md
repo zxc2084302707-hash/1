@@ -6,6 +6,8 @@ Current decision, 2026-11-15: shift the existing account to **PickVela | Bag Buy
 
 Current matching WhatsApp profile copy, prepared for the owner: name `PickVela | Bag Buying Tips`; description `Practical bag-buying checks for Nigeria 🇳🇬: sizes, closures and delivery costs. Independent tips; no products for sale.` The Channel stays optional; it is not a required extra hop around TikTok's missing Website field.
 
+**Current review candidate:** [24-second buying-check draft](https://raw.githubusercontent.com/zxc2084302707-hash/1/dd2a8fa27cf526ed71124369f3b74538bfcb78e3/deliverables/buying-check-2026-11-15/buying-check-draft.mp4). It is 1080×1920 with English text, original music and explanatory animation, without narration. Not published or scheduled. Caption: `Buying a bag online? A photo is only the start. Ask about the measurements, the closure and delivery to your city. Which do you check first? #BagShopping #ShoppingTips #Nigeria`
+
 Prepared 2026-11-14. This replaces earlier suggestions to recruit from the owner's personal WhatsApp contacts. Audience discovery starts with public TikTok content aimed at Nigerian viewers; the existing WhatsApp Channel is a place for returning viewers and direct poll links. Posting to an empty channel alone does not create reach. No paid ads or new accounts are required.
 
 ## Update the existing WhatsApp Channel

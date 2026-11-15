@@ -37,6 +37,6 @@ The owner supplied a green Account Check and a first-post analytics screenshot w
 
 1. [Hair, 15 seconds](https://www.tiktok.com/@pickvela0/video/7707837638136352030), 2026-11-14 01:46:46 UTC.
 2. [Bag scenario, 12 seconds](https://www.tiktok.com/@pickvela0/video/7708209919073226015), 2026-11-15 01:51:30 UTC.
-3. A practical bag-buying-check draft is being prepared for owner review. It is not scheduled or published automatically.
+3. [Practical bag-buying-check draft, 24 seconds](https://raw.githubusercontent.com/zxc2084302707-hash/1/dd2a8fa27cf526ed71124369f3b74538bfcb78e3/deliverables/buying-check-2026-11-15/buying-check-draft.mp4), prepared for owner review. It is not scheduled or published automatically.
 
 Sources: [TikTok profile links](https://support.tiktok.com/en/getting-started/setting-up-your-profile/linking-another-social-media-account), [own-brand disclosure](https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/promoting-a-brand-product-or-service), [commercial music](https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/commercial-use-of-music-on-tiktok). Platform availability must be checked in the actual account.
