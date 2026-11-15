@@ -13,11 +13,13 @@ The owner reports the first video still has zero views and says the second was j
 
 The anonymous profile snapshot still listed one video while the second canonical page already worked. This is an inconsistency in public surfaces, not evidence that the upload failed. Private post notices, traffic sources, retention and audience countries require the owner's in-app analytics.
 
+**Later owner screenshot correction, 2026-11-15:** The first post's in-app overview displays **0 video views**, **1m59s total play time**, **14.9s average watch time**, **37.5% watched the full video**, and **0 likes/comments/shares/saves/new followers**. These fields conflict. The current state is **view-count/watch-statistics inconsistency; real reach unverified**, superseding the inference that there was no viewing sample. The visible screenshot region contains no explicit recommendation-ineligible or under-review notice; it does not show traffic sources or the whole status interface. Neither count synchronisation, a UI defect, self/repeat plays nor an eligibility issue is established as the cause. Do not convert the arithmetic 119/14.9 into eight actual viewers, verified Nigerians, or organic visits. Do not grade the creative from the percentage until the denominator and source are established.
+
 Supabase read-only summary: baseline after 2026-11-13 05:05:18 UTC; 1 new vote / 1 voting browser token, source `chatgptcom`; 0 new interests; 0 share-button taps; 7 poll-view events including known/unknown test provenance. No vote has a TikTok source and no participant is verified as Nigerian. Older 2 votes and 1 interest remain excluded.
 
 ## The decision
 
-Zero plays cannot reveal whether viewers liked the topic: there is no observed viewing sample. Resolve the old post's distribution state first. Separately, the existing stock-photo A/B format provides little guidance about buying, sizing, styling or use. Someone can answer the question mentally or in a TikTok comment without opening a website.
+The first post's zero view counter conflicts with nonzero watch statistics. Resolve the reporting and traffic-source evidence before deciding that there was no distribution or grading creative retention. Separately, the existing stock-photo A/B format provides little guidance about buying, sizing, styling or use. Someone can answer the question mentally or in a TikTok comment without opening a website.
 
 For now, the next editorial hypothesis is **before-buying checks for everyday bags**. Provide the whole useful answer inside TikTok. Keep the already-published posts, preserve all originals and pause the automatic carry/hair-details schedule. Do not make the owner's personal WhatsApp contacts the seed audience.
 
@@ -62,17 +64,17 @@ Follow-up scripts stay within the same bag-buying question:
 
 ## Owner-side distribution check and support draft
 
-Open the **first post → More insights / Analytics**. Check public visibility, any review/ineligible notice, traffic sources and actual plays. If there is an ineligible notice, use the reason and appeal offered there. If it is still under review, retain that status. If the post is public with no stated issue and remains at zero, send a specific problem report through TikTok Settings and privacy → Report a problem. A day is this pilot's diagnostic checkpoint, not a TikTok guarantee of impressions.
+The owner has supplied the first post's **More insights / Analytics** overview. Next, scroll to traffic sources and inspect the Viewers tab if data is available. If a For You source appears, that is evidence the analytics attributes some traffic to recommendation, not proof of adequate reach or audience country. Profile/personal-profile traffic alone does not establish For You distribution. If these fields are unavailable, retain them as unknown. Reopen the app and compare the same post in TikTok Studio if already accessible; do not require installation, logout or an account switch. If the contradictory fields persist, send a specific reporting problem through TikTok Settings and privacy → Report a problem. If an explicit ineligible notice appears anywhere, use its reason/appeal path separately. No official refresh deadline or guaranteed-impression threshold is asserted here.
 
 Paste-ready support draft after checking the post status:
 
-> Hi TikTok Support. My account is @pickvela0. My first post, https://www.tiktok.com/@pickvela0/video/7707837638136352030, was published on 14 November 2026 at 01:46 UTC. It is publicly accessible, but the app still shows zero views more than a day later. Account Check showed no unresolved issues. Please check whether processing or a recommendation restriction is affecting this specific post. I have attached the post-status and analytics screens. Thank you.
+> Hi TikTok Support. My account is @pickvela0. For https://www.tiktok.com/@pickvela0/video/7707837638136352030, published on 14 November 2026 at 01:46 UTC, the app shows 0 video views but 1 minute 59 seconds of total play time, 14.9 seconds average watch time and 37.5% watched the full video. Account Check showed no unresolved issues. Please check the inconsistent analytics and confirm whether this post has any recommendation restriction. I have attached the analytics screenshot. Thank you.
 
 Do not submit the draft until its statements match what the owner sees. The second post is newly published and should not be described as stalled. Neither post was changed, deleted or re-uploaded during this review.
 
 ## Read the next result before expanding
 
-Record the two posts' plays, eligibility/review notice, traffic sources, average watch time/completion, comments, shares/saves and audience countries when those fields are available. If there is no distribution, use support/eligibility evidence; do not score creative retention on zero views. If people watch but do not stay or respond, improve the hook and demonstrable answer. If useful content gets real engagement, use actual questions to choose the next post. If it receives meaningful views but no interest in resources, do not assume a polling website is the product they want.
+Record the two posts' plays, eligibility/review notice, traffic sources, average watch time/completion, comments, shares/saves and audience countries when those fields are available. Preserve conflicting counts as conflicting; do not silently pick the value that supports a diagnosis. Once the denominator and source are credible, use actual retention and response to improve the hook and demonstrable answer. If useful content gets real engagement, use actual questions to choose the next post. If it receives meaningful views but no interest in resources, do not assume a polling website is the product they want.
 
 No universal view or follower threshold is invented here. Two posts cannot validate either sustainable demand or viral growth. Native comments and saves are content-learning signals; the first-100 website participant goal remains separately measured and unfulfilled.
 

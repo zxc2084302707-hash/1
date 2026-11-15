@@ -26,3 +26,4 @@
 - A green Account Check is evidence about the tool's covered issues, not a guarantee of per-post recommendation. Test native participation when a profile has no website field, and keep platform comments separate from the website pilot's participant count.
 - Zero plays cannot reveal creative retention or audience preference. Inspect per-post distribution evidence before diagnosing the topic; compare reference hits with low-reach posts from the same niche.
 - Clipboard fallback must expose the generated share URL itself. Copying the current address can lose the user's chosen side and share attribution; do not log a successful copy when clipboard access failed.
+- A zero view counter alongside nonzero watch time is conflicting evidence. Preserve the fields and their source, revise the diagnosis, and verify the denominator/traffic source before reconstructing viewers or evaluating retention.
