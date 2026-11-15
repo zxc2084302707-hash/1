@@ -30,3 +30,7 @@ Baseline `first_100_organic` began 2026-11-13 05:05:18 UTC, after 2 old votes an
 5. At 48 hours and again after the fourth video, compare: owner-side video engagement; new `src=wa_channel` votes; new `src=wa_friend` votes; share-button taps; and real responses. If there are views but no votes, fix the access path. If votes but no forwards, test a more relatable pair/context. If there are forwards but no downstream votes, inspect the WhatsApp preview and phone load time.
 
 No paid ads, follower purchasing, fake stock/sales, prizes, or fabricated users are part of this test.
+
+## 2026-11-15 superseding decision
+
+The owner has published the second bag-scenario video at https://www.tiktok.com/@pickvela0/video/7708209919073226015 . It is publicly reachable and was only minutes old at inspection. The first post still shows zero after more than a day, so post eligibility/distribution requires owner-side evidence before creative retention can be judged. The revised editorial hypothesis is useful before-buying checks for bags, with the full answer inside TikTok. The site already links back to TikTok in all page footers; the missing Website entry and a lack of extra visitor benefit still block a credible external loop. Supabase remains 1 new vote (`chatgptcom`), 0 new interests, 0 share taps and 7 page-view events with test provenance. See `PICKVELA-EDITORIAL-RESET-2026-11-15.md` for the evidence table, script, support text and experiment. The prior 48-hour plan does not mandate posting the remaining originals.

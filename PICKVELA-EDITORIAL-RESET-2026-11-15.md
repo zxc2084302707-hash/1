@@ -1,0 +1,79 @@
+# PickVela · content and funnel correction · 2026-11-15
+
+Continue the existing @pickvela0, website, Supabase pilot and video branches. New external spend: CNY 0. This document supersedes the automatic remaining-video rollout in older launch plans. It does not authorize automatic posting or outreach.
+
+## Current evidence
+
+The owner reports the first video still has zero views and says the second was just published. Both public canonical pages were reachable at this check:
+
+| Post | Published UTC | Evidence and limits |
+| --- | --- | --- |
+| [Hair](https://www.tiktok.com/@pickvela0/video/7707837638136352030) | 2026-11-14 01:46:46 | Public page returns zero plays/engagement after more than a day; owner also reports zero. Account Check screenshot says no unresolved issues, but this does not establish this post's recommendation eligibility. |
+| [Bag scenario](https://www.tiktok.com/@pickvela0/video/7708209919073226015) | 2026-11-15 01:51:30 | Public page returns the expected Nigeria errand caption, 12-second duration and PickVela original music attribution. Zero just after upload has no diagnostic value. The page being accessible does not prove recommendation eligibility. |
+
+The anonymous profile snapshot still listed one video while the second canonical page already worked. This is an inconsistency in public surfaces, not evidence that the upload failed. Private post notices, traffic sources, retention and audience countries require the owner's in-app analytics.
+
+Supabase read-only summary: baseline after 2026-11-13 05:05:18 UTC; 1 new vote / 1 voting browser token, source `chatgptcom`; 0 new interests; 0 share-button taps; 7 poll-view events including known/unknown test provenance. No vote has a TikTok source and no participant is verified as Nigerian. Older 2 votes and 1 interest remain excluded.
+
+## The decision
+
+Zero plays cannot reveal whether viewers liked the topic: there is no observed viewing sample. Resolve the old post's distribution state first. Separately, the existing stock-photo A/B format provides little guidance about buying, sizing, styling or use. Someone can answer the question mentally or in a TikTok comment without opening a website.
+
+For now, the next editorial hypothesis is **before-buying checks for everyday bags**. Provide the whole useful answer inside TikTok. Keep the already-published posts, preserve all originals and pause the automatic carry/hair-details schedule. Do not make the owner's personal WhatsApp contacts the seed audience.
+
+The website remains an optional research destination. Its TikTok link is already in the footer of the home and all four poll pages. It does not automatically insert itself into a TikTok profile, turn votes into videos, or produce followers. With no profile Website field, a footer return link does not repair TikTok-to-site access. Even after an entry exists, a reusable checklist or verified comparison must offer something beyond the same A/B question before an external visit is a reasonable request. Do not build a new referral system merely to add buttons.
+
+## References checked on official TikTok pages
+
+Public HTML metrics are a snapshot, not audited viewers or evidence of audience country. Covers were visually inspected where stated; full videos were not watched. These accounts are references, not permission to reuse footage or contact their audiences.
+
+| Reference | Public evidence | What can be learned |
+| --- | --- | --- |
+| [@fancique_ng](https://www.tiktok.com/@fancique_ng/video/7696842970221301000) | 2026-10-15; 81s; 142,400 plays, 1,203 shares, 2,997 saves, 102 comments. Cover shows a person holding a pink curves tote; title asks viewers to watch before buying. Profile describes a Lagos bag vendor. | A specific purchase question and a visible real item give a reason to watch. No verified durability test or viewer geography was established. Its reach cannot be forecast for PickVela. |
+| [@riah_bags · work essentials](https://www.tiktok.com/@riah_bags/video/7684595151854980374) | 2026-09-12; 15s; 6,640 plays, 18 shares, 46 saves. Cover shows a person with a bag. | Concrete daily use provides a clearer premise than detached preference collection. Capacity is a seller assertion, not independently tested. |
+| [@riah_bags · five days / one bag](https://www.tiktok.com/@riah_bags/video/7683465413925145878) | 2026-09-09; 13s; 394 plays, 0 shares, 5 saves. | A useful-sounding hook can still receive little reach. Do not infer a repeatable viral formula from one hit. |
+| [@riah_bags · bag-care tips](https://www.tiktok.com/@riah_bags/video/7683056541561359638) | 2026-09-08; 54s; 278 plays, 0 shares, 4 saves. | Length and an advice topic do not themselves guarantee distribution. |
+
+Other verified profiles: [@thisthingcalledfashion](https://www.tiktok.com/@thisthingcalledfashion) (styling/editorial) and [@benydon](https://www.tiktok.com/@benydon) (bag vendor). Their individual clips were not fully reviewed; no performance claims are made here.
+
+## Next reviewable script, not yet a new video
+
+Title: **Buying a bag online? Ask these three questions.**
+
+English script (approximately 22–25 seconds if spoken; currently text/storyboard only):
+
+> Buying a bag online? Before you pay, check three things. First, ask for the actual measurements, not just a photo. Next, ask to see the opening and how it closes. Then confirm the total price, including delivery to your city. Which detail do you usually check first? Save this for your next order.
+
+| Time | Visual / on-screen text |
+| --- | --- |
+| 0–3s | Buying a bag online? Check these 3 things. |
+| 3–8s | Original drawn width/height/depth guide; actual measurements, not just a photo. No invented measurements attached to a real product. |
+| 8–13s | Original drawn open/closed bag icons; ask to see the opening and closure. |
+| 13–19s | Original formula: bag price + delivery to your city = total. No fabricated deal price. |
+| 19–25s | Measurements · Closure · Total price. Which do you check first? |
+
+Caption: `A nice photo doesn’t tell you everything. Measurements, the closure, and the full delivery price — what do you check before ordering a bag? #BagShopping #ShoppingTips #Nigeria`
+
+If a later clip uses a physical item, it must be genuinely filmed with access to that item. Stock photos must not be described as a first-person review, quality test, verified capacity or available stock. Competitor footage is not a production asset. Keep the existing no-spoken-narration preference unless the owner changes it.
+
+Follow-up scripts stay within the same bag-buying question:
+- **Will your laptop fit?** Compare your own device's real dimensions with the seller's usable opening and internal dimensions; an outer width alone cannot guarantee fit. A specific fit verdict needs the actual bag or reliable measured specs.
+- **What does this bag cost to reach your city?** Compare current item price, delivery, eligibility and the displayed return terms. A claimed Nigeria bargain requires live specific listings and a check date, with seller assertions marked as such. A searched Jumia example was out of stock on inspection; it is not a recommended purchase link.
+
+## Owner-side distribution check and support draft
+
+Open the **first post → More insights / Analytics**. Check public visibility, any review/ineligible notice, traffic sources and actual plays. If there is an ineligible notice, use the reason and appeal offered there. If it is still under review, retain that status. If the post is public with no stated issue and remains at zero, send a specific problem report through TikTok Settings and privacy → Report a problem. A day is this pilot's diagnostic checkpoint, not a TikTok guarantee of impressions.
+
+Paste-ready support draft after checking the post status:
+
+> Hi TikTok Support. My account is @pickvela0. My first post, https://www.tiktok.com/@pickvela0/video/7707837638136352030, was published on 14 November 2026 at 01:46 UTC. It is publicly accessible, but the app still shows zero views more than a day later. Account Check showed no unresolved issues. Please check whether processing or a recommendation restriction is affecting this specific post. I have attached the post-status and analytics screens. Thank you.
+
+Do not submit the draft until its statements match what the owner sees. The second post is newly published and should not be described as stalled. Neither post was changed, deleted or re-uploaded during this review.
+
+## Read the next result before expanding
+
+Record the two posts' plays, eligibility/review notice, traffic sources, average watch time/completion, comments, shares/saves and audience countries when those fields are available. If there is no distribution, use support/eligibility evidence; do not score creative retention on zero views. If people watch but do not stay or respond, improve the hook and demonstrable answer. If useful content gets real engagement, use actual questions to choose the next post. If it receives meaningful views but no interest in resources, do not assume a polling website is the product they want.
+
+No universal view or follower threshold is invented here. Two posts cannot validate either sustainable demand or viral growth. Native comments and saves are content-learning signals; the first-100 website participant goal remains separately measured and unfulfilled.
+
+Official references: [post eligibility and appeals](https://support.tiktok.com/en/safety-hc/account-and-user-safety/content-violations-and-bans), [website/profile links](https://support.tiktok.com/en/getting-started/setting-up-your-profile/linking-another-social-media-account), [recommendation factors](https://support.tiktok.com/en/using-tiktok/exploring-videos/how-tiktok-recommends-content), [Creator Search Insights rollout](https://newsroom.tiktok.com/creator-search-insights?lang=en). CSI is region-dependent; this account's access and Nigerian keyword volume are not verified. Search the tool in the actual app before claiming a trend.

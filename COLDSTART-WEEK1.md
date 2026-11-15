@@ -90,3 +90,7 @@ The baseline is saved separately; do NOT count old test votes as new real users.
 - Third-party Pexels photo hotlinks may fail on some networks. UI has emoji fallback. Get own authorized supplier images once a style is validated.
 - Never post TikTok videos via connected apps without user authorizing channel and reviewing the first posts.
 - No user comments or phone data are collected by the web app; use the channel for general broadcast only, not private support.
+
+## 2026-11-15 update · two posts, distribution first
+
+The owner supplied the second public bag post: https://www.tiktok.com/@pickvela0/video/7708209919073226015 . It was published at 01:51:30 UTC and is reachable anonymously. The old hair post still has zero plays after more than a day, so inspect its private analytics/eligibility and use a specific support report if no reason is given. Stop treating the remaining original-video timetable as automatic. `PICKVELA-EDITORIAL-RESET-2026-11-15.md` has the reference account evidence, before-buying editorial direction and the next reviewable script. No new video is scheduled or automatically published.

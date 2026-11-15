@@ -45,3 +45,7 @@ If the post remains at zero after a chosen 24-hour diagnostic interval, with pub
 - [Commercial music use](https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/commercial-use-of-music-on-tiktok)
 - [How recommendations work](https://support.tiktok.com/en/using-tiktok/exploring-videos/how-tiktok-recommends-content)
 - [TikTok Photo Mode](https://newsroom.tiktok.com/editing-tools/?lang=en)
+
+## 2026-11-15 current status
+
+The second bag-scenario post is now public: https://www.tiktok.com/@pickvela0/video/7708209919073226015 (01:51:30 UTC). Public post metadata matches the 12-second candidate and attributes original music to PickVela. The first hair post remains at zero in both the owner report and anonymous public HTML after more than a day. The next step is its individual eligibility/analytics check, not another profile rewrite. See `PICKVELA-EDITORIAL-RESET-2026-11-15.md` for the support draft and useful-content hypothesis.

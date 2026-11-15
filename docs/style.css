@@ -22,3 +22,6 @@
 .poll-top .friend-pick{margin:12px 0;padding:12px 14px;border-radius:12px;background:#eaf4ed;color:#165840;font-weight:750}
 .compare-pick{margin:7px 0 12px;color:#286e50;font-weight:700;font-size:14px}
 .share-prompt{margin:20px 0 0;font-size:14px;font-weight:700;color:#244c38}
+
+.share-link{display:block;width:100%;min-width:0;min-height:44px;padding:12px;border:1px solid #bdcec4;border-radius:10px;background:#fff;color:#18342a;font-size:16px}
+.share-link:focus-visible{outline:3px solid #daaf37;outline-offset:2px}

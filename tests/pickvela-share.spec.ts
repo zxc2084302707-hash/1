@@ -65,3 +65,39 @@ test('each poll exposes a reachable image for WhatsApp link previews', async ({ 
     expect((await image.body()).byteLength).toBeGreaterThan(50_000)
   }
 })
+
+for (const clipboardState of ['unavailable', 'denied']) {
+  test(`a ${clipboardState} clipboard offers the chosen-side challenge URL for manual copying`, async ({ page }) => {
+    const copyEvents: string[] = []
+    await page.addInitScript(state => {
+      Object.defineProperty(navigator, 'clipboard', {
+        configurable: true,
+        value: state === 'unavailable' ? undefined : {
+          writeText: async () => { throw new Error('Clipboard permission denied') },
+        },
+      })
+    }, clipboardState)
+    await page.route('**/rest/v1/**', async route => {
+      const url = route.request().url()
+      const body = route.request().postDataJSON() as { p_kind?: string } | null
+      let data: unknown = null
+      if (url.includes('/buylink_polls?')) data = [poll, nextPoll]
+      else if (url.includes('/buylink_cast_vote')) data = 'b'
+      else if (url.includes('/buylink_result')) data = { a_votes: 1, b_votes: 1 }
+      else if (url.includes('/buylink_log_event') && body?.p_kind === 'copy') copyEvents.push('copy')
+      await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(data) })
+    })
+
+    await page.goto('/p/scrunchies-or-clips/?src=wa_friend&friend=a')
+    await page.getByRole('button', { name: 'Vote for Claw clips' }).click()
+    await page.getByRole('button', { name: 'Copy challenge link' }).click()
+    const manualLink = page.getByRole('textbox', { name: 'Challenge link' })
+    await expect(manualLink).toBeVisible()
+    await expect(manualLink).toHaveValue('http://127.0.0.1:8765/p/scrunchies-or-clips/?src=share&friend=b')
+    await expect(manualLink).toHaveAttribute('readonly', '')
+    await expect(manualLink).toBeFocused()
+    expect(await manualLink.evaluate((node: HTMLInputElement) => node.selectionEnd! - node.selectionStart!)).toBe((await manualLink.inputValue()).length)
+    expect(copyEvents).toHaveLength(0)
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  })
+}

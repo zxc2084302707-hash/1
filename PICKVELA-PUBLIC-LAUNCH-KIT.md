@@ -1,5 +1,7 @@
 # PickVela · public cold start kit (owner posts from phone)
 
+Updated 2026-11-15: the owner published the [second, bag-scenario post](https://www.tiktok.com/@pickvela0/video/7708209919073226015). Pause the automatic remaining-video schedule while checking the first post’s distribution. The current editorial decision and next script are in `PICKVELA-EDITORIAL-RESET-2026-11-15.md`.
+
 Prepared 2026-11-14. This replaces earlier suggestions to recruit from the owner's personal WhatsApp contacts. Audience discovery starts with public TikTok content aimed at Nigerian viewers; the existing WhatsApp Channel is a place for returning viewers and direct poll links. Posting to an empty channel alone does not create reach. No paid ads or new accounts are required.
 
 ## Update the existing WhatsApp Channel
@@ -27,7 +29,7 @@ The owner's latest Account Check screenshot shows no unresolved issues. Check th
 
 | Order | Asset | Proposed slot | Paste-ready caption |
 | --- | --- | --- | --- |
-| Next · bag scenario test | [bags-comment-test.mp4](https://raw.githubusercontent.com/zxc2084302707-hash/1/1042dbd98dffcdbb993a2821813e269185c97cd4/deliverables/experiment-2026-11-14/bags-comment-test.mp4) | Next reviewed post, 12:00–14:00 WAT | `Nigeria, quick errand: are you keeping it light or bringing the extras? A or B — and what always ends up in your bag? 👜 #Nigeria #EverydayStyle #Bags` |
+| Published 2026-11-15 · bag scenario | [bags-comment-test.mp4](https://raw.githubusercontent.com/zxc2084302707-hash/1/1042dbd98dffcdbb993a2821813e269185c97cd4/deliverables/experiment-2026-11-14/bags-comment-test.mp4) | Published 01:51 UTC; no repost scheduled | `Nigeria, quick errand: are you keeping it light or bringing the extras? A or B — and what always ends up in your bag? 👜 #Nigeria #EverydayStyle #Bags` |
 | Later candidate · organiser/pouch | [carry-final.mp4](https://raw.githubusercontent.com/zxc2084302707-hash/1/de8002f154991e645ff40147fa91423cf8589803/deliverables/batch-2026-11-13/carry-final.mp4) | Review after bag test | `Where do your little things go — into a jewellery box or a zip pouch? A or B, and why? #Nigeria #StyleChoices` |
 | Later candidate · pins/headband | [hair_details-final.mp4](https://raw.githubusercontent.com/zxc2084302707-hash/1/de8002f154991e645ff40147fa91423cf8589803/deliverables/batch-2026-11-13/hair_details-final.mp4) | Review after bag test | `Pearl pins or a colourful headband when you're getting ready fast? Pick A or B and tell me why. ✨ #Nigeria #HairStyle` |
 
