@@ -1,5 +1,7 @@
 # PickVela · current owner-side TikTok setup
 
+**最新状态（2026-11-15）：用户已否决最新 24 秒视频，并要求暂停本轮推进、转交 GPT 整合诊断。下列定位、简介及视频建议不是已确认执行方案；以 `PICKVELA-DIAGNOSTIC-HANDOFF-2026-11-15.md` 为当前交接依据。**
+
 Updated 2026-11-15 after the owner directed the project to stop over-focusing on counters and change content/account positioning. Existing handle: **@pickvela0**, https://www.tiktok.com/@pickvela0 . Settings below are prepared for the owner; no authenticated profile changes are claimed.
 
 ## Apply this positioning once

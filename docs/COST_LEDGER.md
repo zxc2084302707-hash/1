@@ -26,3 +26,5 @@ PickVela second-post review, reference research, editorial correction and clipbo
 PickVela owner analytics screenshot review and reporting-diagnosis correction, 2026-11-15: **CNY 0 new external spend**. Documentation and official-source review only; no generation, promotion or deployment.
 
 PickVela owner-directed content/account repositioning and 24-second practical guide draft, 2026-11-15: **CNY 0 new external spend**. Existing licensed photo and original composition, local original animation/rendering, existing video branch. No paid tool, new service, ad or public post.
+
+PickVela user-requested integrated diagnostic handoff after draft rejection, 2026-11-15: **CNY 0 new external spend**. Documentation and read-only data verification only.

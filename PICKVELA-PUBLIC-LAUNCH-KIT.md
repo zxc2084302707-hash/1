@@ -1,5 +1,7 @@
 # PickVela · public cold start kit (owner posts from phone)
 
+**最新状态（2026-11-15）：用户已否决最新 24 秒视频，并要求暂停本轮推进、转交 GPT 整合诊断。下列定位、简介及视频建议不是已确认执行方案；以 `PICKVELA-DIAGNOSTIC-HANDOFF-2026-11-15.md` 为当前交接依据。**
+
 Current decision, 2026-11-15: shift the existing account to **PickVela | Bag Buying Tips**. Bio: `Bag-buying checks for Nigeria 🇳🇬` / `Size, details & the full cost.` The owner has published the [bag-scenario post](https://www.tiktok.com/@pickvela0/video/7708209919073226015), but future default posts are practical buying information, not the remaining A/B batch. Analytics troubleshooting does not block preparing the new material. The current account steps are in `TIKTOK-ACCOUNT-SETUP.md`; the earlier kit below remains historical/reference copy and does not automatically schedule a post.
 
 **Website entry:** no clickable TikTok Website field is confirmed. Make the complete content and question usable inside TikTok. The site-first 100-participant goal is still unmet; a native comment is not a site participant. Do not describe this as a live TikTok-to-website referral funnel.

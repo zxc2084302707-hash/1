@@ -28,3 +28,4 @@
 - Clipboard fallback must expose the generated share URL itself. Copying the current address can lose the user's chosen side and share attribution; do not log a successful copy when clipboard access failed.
 - A zero view counter alongside nonzero watch time is conflicting evidence. Preserve the fields and their source, revise the diagnosis, and verify the denominator/traffic source before reconstructing viewers or evaluating retention.
 - An unresolved measurement discrepancy need not block an independently reviewable content improvement. When a platform has no usable website entry, make the full viewer benefit native and keep the separate website acquisition goal visibly unfulfilled.
+- File validity, delivery and user approval are different states. When a user rejects a draft and asks for diagnosis, mark the rejection and pause the proposed rollout; preserve unresolved product/channel assumptions instead of presenting a new positioning as accepted.

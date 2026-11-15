@@ -1,5 +1,7 @@
 # PickVela · content and funnel correction · 2026-11-15
 
+**最新状态（2026-11-15）：用户已否决最新 24 秒视频，并要求暂停本轮推进、转交 GPT 整合诊断。下列定位、简介及视频建议不是已确认执行方案；以 `PICKVELA-DIAGNOSTIC-HANDOFF-2026-11-15.md` 为当前交接依据。**
+
 Continue the existing @pickvela0, website, Supabase pilot and video branches. New external spend: CNY 0. This document supersedes the automatic remaining-video rollout in older launch plans. It does not authorize automatic posting or outreach.
 
 ## Current execution priority after the owner's correction
